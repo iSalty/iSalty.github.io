@@ -1,0 +1,126 @@
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+  background: #262626;
+}
+
+footer.container {
+  margin: 0 0 0 0;
+  width: 100%;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
+
+nav {
+  background: #ccc;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+nav.container {
+  color: #000066;
+  width: 100%;
+  padding-left: 40px;
+  font-size: 1.6rem;
+}
+
+nav a {
+  color: #000066;
+}
+
+nav a:hover {
+  opacity: 0.5;
+}
+
+.nav-bar-logo {
+  width: 18px;
+  height: auto;
+  padding-right: 5px;
+  padding-bottom: 4px;
+}
+
+.page-header {
+  margin: 0 0 0 0;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  background-size: cover;
+}
+
+.page-header h1 {
+  font-family: "Roboto", serif;
+  margin: 0px;
+  margin-top: 40px;
+  color: #000066;
+}
+
+.page-header h4 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.post-title {
+  font-family: "Ubuntu", serif;
+  margin-top: 0;
+  color: #000066;
+}
+
+.post-text {
+  font-family: "Roboto", serif;
+  font-size: 1.7rem;
+  line-height: 1.375;
+}
+
+.post-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.post-bullets {
+  margin-left: 20px;
+}
+
+section.container {
+  margin: 0 0 0 0;
+  width: 100%;
+  padding-left: 40px;
+  padding-top: 70px;
+  padding-right: 10%;
+  padding-bottom: 2%;
+  background: #eee;
+}
+
+section ul li {
+  padding-bottom: 3px;
+  font-size: 1.7rem;
+}
+
+.user-img {
+  float: left;
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+section h5 {
+  margin: 0 0 0 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1;    
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ian's EE Blog</title>
+  	<meta charset="utf-8" />
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  	<link href='https://fonts.googleapis.com/css?family=Roboto|Ubuntu' rel='stylesheet' type='text/css'>
+  	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+	<div class="page-header">
+		<h1>Ian's EE Blog</h1>
+		<h4>Keeping up to date with all of the zany things I do.</h4>
+	</div>
+	<nav class="container">
+		<div class="row">
+			<div class="col-md-1 col-sm-2">
+				<a href="https://www.linkedin.com/in/ian-saltwick-23591b81"><img class="nav-bar-logo" src="logos/linkedin_logo.png"/>LinkedIn</a>
+			</div>
+			<div class="col-md-1 col-sm-2">
+				<a href="https://www.facebook.com/ian.saltwick"><img class="nav-bar-logo" src="logos/facebook_logo.png"/>Facebook</a>
+			</div>
+			<div class="col-md-1 col-sm-2">
+				<a href="https://github.com/"><img class="nav-bar-logo" src="logos/github_logo.png"/>GitHub</a>
+			</div>
+		</div>
+	</nav>
+	<section class="container">
+		<div class="row">
+			<div class="col-sm-2">
+				<img class="user-img" src="http://images.clipartpanda.com/hercules-clip-art-hercules001.gif"/>
+				<h5 class="author">iSaltwick</h5> 
+				<h5 class="post-date">August 20, 2016</h5>
+			</div>
+			<div class="col-md-8 col-sm-10">
+				<h3 class="post-title">About This Site</h3>
+				<p class="post-text"> 
+					Hi, I am a recent graduate from Arizona State University in the field of Electrical Engineering. I have been involved in a few noteworthy projects during my time in college and would love to continue tinkering and inventing on my own time. I intend for this to be the site where others can come to see what projects I have been working on and my thought process throughout the time that I was involved in those projects. 
+				</p>
+				<p class="post-text">
+					I am putting together this website to serve as a platform to share the many fun and interesting projects I am working on and to serve as some sort of a portfolio of my projects. Building this website was a project in itself. Never before have I had any experience with web design and I wanted to learn how to make a website essentially only using the barebones HTML and CSS code. So I headed over to <a href="https://www.codecademy.com/learn"> codecademy.com</a> and spent a day learning HTML, CSS and the bootstrap framework in the Making a Website course. I spent another day perusing the interwebs to find inspiration on the asthetic of the website. Finally, I spent one day sitting down and coding the thing. It surprised me just how quickly I picked it up and I really ended up enjoying it. Having complete control over the layout (down to the pixel) and being able to see the changes with a simple refresh was a very exciting way to make progress. Nevertheless, this is the result, the page you are looking at and interacting with. It is my first experience with web design and, I have to say, I am quite pleased with the results. You can find the code for this website on my GitHub page if you are interested. Hopefully this blog proves to be as much fun to read as it is for me to create and update.  
+				</p>
+			</div>
+		</div>
+		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		<div class="row">
+			<div class="col-sm-2">
+				<img class="user-img" src="http://images.clipartpanda.com/hercules-clip-art-hercules001.gif"/>
+				<h5 class="author">iSaltwick</h5> 
+				<h5 class="post-date">August 21, 2016</h5>
+			</div>
+			<div class="col-md-8 col-sm-10">
+				<h3 class="post-title">LED Bike Wheel: 1</h3>
+				<p class="post-text">
+					The 'LED Bike Wheel' was the title of my senior design project from Arizona State University. It was completed over the last year of school with two of my good buddies from college, Matthew Jackson and Cameron Mahai. It was the last project that I worked on in college and would love to highlight it here because it was such a fun, and at times, stressful project. 
+				</p>
+				<p class="post-text">
+					Living in Tempe (one of the most bikeable cities in the US) we encountered many bikes in our daily lives. For most of us it was the primary form of transportation because we were too poor to have cars. It was how all three of us (Matt, Cameron, and myself) commuted to campus and back everyday of the week. Bikes, being so central to our daily lives, were at the forefront of our thoughts when it came time to pick a project topic in the Fall of 2015. We had all seen people attempt to put lights on their bikes, but most were just sad strands of LEDs that just went about, producing nothing but a wiggly circle. We wanted take that idea and kick it up a notch. 
+				</p>
+				<p class="post-text">
+					Thus the idea was born that there could be static images displayed on the bike wheel as the bike was in motion using the physical phenomenon of Persistence of Vision. Persistence of Vision is the explanation of how the human eye to retains a discrete image of light for fractions of a second after it has gone. “Whenever light strikes the retina, the brain retains the impression of that light for about a tenth of a second…after the source of the light is removed. As a result, the eye cannot clearly distinguish fast changes in light that occur faster than this retention period.” <a href="http://www.foundationsmag.com/persistence_of_vision.html">[1]</a>. This phenomenon has inspired the creation of many technologies. It is at the core of how motion is displayed to us in movies or on television screens <a href="http://www.foundationsmag.com/persistence_of_vision.html">[1]</a>. The LED Bike Wheel would be able to utilize the sluggishness of the human eye and mind to not only create animation (using multiple frames in succession) but also to create the screen itself. In the assembly there would exists only a few pixels, but when spinning around at a fast enough rate each pixel is perceived by the mind as a solid circle. The color of any point on those circles can be controlled to produce the desired image. An illustration of POV as it relates to our bike display is shown below. 
+				</p>
+				<div>
+					<img class="post-image" src="pictures/paint of square to polar.png" height="400px" width="auto"/>
+				</div>
+				<p class="post-text">
+					Each blue circle represents what our minds would see from a lit single pixel, rotating about the center faster than our brains could compensate. It is now clear to see where in the rotation each LED would need to turn red in order to create the image of the red square, and it is the goal of this project to design a system to do so.
+				</p>
+			</div>
+		</div>
+		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		<div class="row">
+			<div class="col-sm-2">
+				<img class="user-img" src="http://images.clipartpanda.com/hercules-clip-art-hercules001.gif"/>
+				<h5 class="author">iSaltwick</h5> 
+				<h5 class="post-date">August 22, 2016</h5>
+			</div>
+			<div class="col-md-8 col-sm-10">
+				<h3 class="post-title">LED Bike Wheel: 2</h3>
+				<p class="post-text">
+					Unsurprisingly, we were not the first people to think of this. However, the other similar projects which have been completed are fairly recent and our project has its own advantages. Here are a couple of products / projects similar to ours which are worth checking out.
+				</p>
+				<ul class="post-bullets">
+					<li><a href="http://www.monkeylectric.com/monkey_light_pro/">MonkeyLectric's Monkey Light Pro</a></li>
+					<li><a href="">Some other project</a></li>
+				</ul>
+				<p class="post-text">
+					The MonkeyLectric one is really quite impressive with the quality of the images they are able to recreate. Nevertheless, they have encountered some problems which we have improved upon. MonkeyLectric's product uses Bluetooth to transfer the images from a phone (only iOs at the moment) and does the image processing on the phone as well. After looking through the MonkeyLectric forums we identified that the Bluetooth transfer rate was slow and the processing on phone would drain people's battery and even cause some heat problems. Therefore we elected to have our device work over WiFi (capable of recieving transfers from any internet connected device) and to do the necessary image processing on the bike wheel assembly.
+				</p>
+			</div>
+		</div>
+	</section>
+	<footer class="container">
+  		<div class="row">
+      		<p class="col-sm-4" style="color:#cccccc">
+        	&copy; 2016 Rumpler
+      		</p>
+      		<ul class="col-sm-8">
+        		<a href="https://www.linkedin.com/in/ian-saltwick-23591b81"><li class="col-sm-1"> <img src="logos/linkedin_footer_logo.png"></li></a>
+        		<a href="https://www.facebook.com/ian.saltwick"><li class="col-sm-1"> <img src="logos/facebook_footer_logo.gif"></li></a>
+        		<a href="https://github.com/"><li class="col-sm-1"> <img src="http://www.iconsdb.com/icons/preview/gray/github-10-xxl.png"></li></a>
+      		</ul>
+    	</div>
+  	</footer>
+</body>
+</html>
