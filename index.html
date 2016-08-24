@@ -59,7 +59,7 @@
 					Living in Tempe (one of the most bikeable cities in the US) we encountered many bikes in our daily lives. It was how all three of us (Matt, Cameron, and myself) commuted to campus and back everyday of the week. Bikes, being so central to our daily lives, were at the forefront of our thoughts when it came time to pick a project topic in the Fall of 2015. We had all seen people attempt to put lights on their bikes, but most were just sad strands of LEDs that just went about, producing nothing but a wiggly circle. We wanted take that idea and kick it up a notch. 
 				</p>
 				<p class="post-text">
-					Thus the idea was born that there could be static images displayed on the bike wheel as the bike was in motion using the physical phenomenon of Persistence of Vision. Persistence of Vision is the explanation of how the human eye to retains a discrete image of light for fractions of a second after it has gone. “Whenever light strikes the retina, the brain retains the impression of that light for about a tenth of a second…after the source of the light is removed. As a result, the eye cannot clearly distinguish fast changes in light that occur faster than this retention period.” <a href="http://www.foundationsmag.com/persistence_of_vision.html" target="_blank">[1]</a>. This phenomenon has inspired the creation of many technologies. It is at the core of how motion is displayed to us in movies or on television screens <a href="http://www.foundationsmag.com/persistence_of_vision.html" target="_blank">[1]</a>. The LED Bike Wheel would be able to utilize the sluggishness of the human eye and mind to not only create animation (using multiple frames in succession) but also to create the screen itself. In the assembly there would exists only a few pixels, but when spinning around at a fast enough rate each pixel is perceived by the mind as a solid circle. The color of any point on those circles can be controlled to produce the desired image. An illustration of POV as it relates to our bike display is shown below. 
+					Thus the idea was born that there could be static images displayed on the bike wheel as the bike was in motion using the physical phenomenon of Persistence of Vision. Persistence of Vision is the explanation of how the human eye to retains a discrete image of light for fractions of a second after it has gone. “Whenever light strikes the retina, the brain retains the impression of that light for about a tenth of a second…after the source of the light is removed. As a result, the eye cannot clearly distinguish fast changes in light that occur faster than this retention period.” <a href="http://www.foundationsmag.com/persistence_of_vision.html" target="_blank">[1]</a>. This phenomenon has inspired the creation of many technologies. It is at the core of how motion is perceived by us in movies or on television screens <a href="http://www.foundationsmag.com/persistence_of_vision.html" target="_blank">[1]</a>. The LED Bike Wheel would be able to utilize the sluggishness of the human eye and mind to not only create animation (using multiple frames in succession) but also to create the screen itself. In the assembly there would exists only a few pixels, but when spinning around at a fast enough rate each pixel is perceived by the mind as a solid circle. The color of any point on those circles can be controlled to produce the desired image. An illustration of POV as it relates to our bike display is shown below. 
 				</p>
 				<div>
 					<img class="post-image" src="Pictures/paint of square to polar.png" height="400px" width="auto"/>
@@ -103,7 +103,7 @@
 					Now that we had decided what the product was supposed to be and do, it was time to get to work on actually prototyping it. First up was learning how to work with the Raspberry Pi. It was the first time any of us had worked with microcontrollers like this, fortunatley, the RPi is what is termed a microcomputer. Basically it is a fully functional computer, just miniaturized, complete with a GUI for the desktop and file system. We utilized the Raspbian Jessie operating system which is built on Linux. Therefore, eventhough it has a fully function GUI, it was still beneficial to learn how to work within the command line because of how useful it is on Linux platforms. 
 				</p>
 				<p class="post-text">
-					After fimiliarizing myself with the command line I decided that I wanted to write my first program on the RPi and have it light up some LEDs. The Raspberry Pi has great built in functionality with Python programs and therefore Python was the language of choice when writing most of my programs. Again, I had some learning to do because I had never written a program in Python. I did, however, have a good working knowledge of C++ so it came to me quick. Using these <a href="https://www.adafruit.com/products/302?gclid=Cj0KEQjw6O-9BRDjhYXH2bOb8Z4BEiQAWRdukxl-JQYDdKpD95jpF_yId-9EI2LiMlpYy1B5FyyQqVoaAvEP8P8HAQ" target="_blank">common anode LEDs</a> I purchased from Adafruit.com and some resistors I had lying around I was able to quickly whip up <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/colorFunc.py" target="_blank">this program</a>. The program changes the colors of two LEDs simply by controlling specific GPIO pins to be on or off. A video of the program running can be seen below.
+					After fimiliarizing myself with the command line I decided that I wanted to write my first program on the RPi and have it light up some LEDs. The Raspberry Pi has great built in functionality with Python programs and therefore Python was the language of choice when writing most of my programs. Again, I had some learning to do because I had never written a program in Python. I did, however, have a good working knowledge of C++ so it came to me quick. Using these <a href="https://www.adafruit.com/products/302?gclid=Cj0KEQjw6O-9BRDjhYXH2bOb8Z4BEiQAWRdukxl-JQYDdKpD95jpF_yId-9EI2LiMlpYy1B5FyyQqVoaAvEP8P8HAQ" target="_blank">common anode RGB LEDs</a> I purchased from Adafruit and some resistors I had lying around I was able to quickly whip up <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/colorFunc.py" target="_blank">this program</a>. The program changes the colors of two LEDs simply by controlling specific GPIO pins to be on or off. A video of the program running can be seen below.
 				</p>
 				<div class="post-video">
 					<iframe width="420" height="315" src="https://www.youtube.com/embed/B8FuRu6dYN0" frameborder="0" allowfullscreen></iframe>
@@ -115,10 +115,31 @@
 			<div class="col-sm-2">
 				<img class="user-img" src="http://images.clipartpanda.com/hercules-clip-art-hercules001.gif"/>
 				<h5 class="author">iSaltwick</h5> 
-				<h5 class="post-date">August 23, 2016</h5>
+				<h5 class="post-date">August 24, 2016</h5>
 			</div>
 			<div class="col-md-8 col-sm-10">
 				<h3 class="post-title">LED Bike Wheel: 4</h3>
+				<p class="post-text">
+					I had shown that the LEDs could be controlled simply through the Raspberry Pi's GPIO pins. However, we wanted a lot of LEDs on our bike wheel (48 to be exact) and there simply were not enough GPIO pins on the RPi to accomodate that number of LEDs. After some research we elected to go with adding GPIO expander chips from Microchip (the MCP23S17) which would add 16 GPIO ports per chip. In theory the RPi could accomodate adding up to 16 MCP23S17s, we ended up using 12. 
+				</p>
+				<p class="post-text">
+					The reason we needed so many extra ports was because each individual RGB LED required 4 GPIO pins to be controlled. The four pins would control the Red, Green, and Blue pins, as well as Power to the LED. Below, you can see a pin diagram the RGB LEDs we used and the scheme used to hook them up to the MCP2317s to be controlled.   
+				</p>
+				<div>
+					<img class="post-image" src="Pictures/rgbLED_MCP.png"/>
+				</div>
+				<p class="post-text">
+					Because the LEDs used in this assembly are common anode, 5v is put into the common anode and the current flows through wherever there is a voltage differential. Consequently, it runs backwards, in a sense. For example, if Red was the desired color of the LED, the pins would have to be controlled in the following way, [B:1, G:1, R:0, Pow:1]. This way there is only a voltage difference between the voltage input (anode) and the desired return path, red; thus, the LED turns red. 
+				</p>
+				<p class="post-text">
+					The MCP23S17 also added the functionality of being able to write to it a whole byte at a time. This allows us to control one side (2 LEDs) of the MCP23S17 with a single write command. Thus defining the colors as hexadecimal values would make the process of doing this much easier. A table of the colors and their equivalent Hex values is shown below. This will come in handy later when we examine the code that conducts the LEDs during runtime. 
+				</p>
+				<p class="col-sm-offset-1 col-md-offset-3" style="font-size: 1.4rem">
+						K = Black, W = White, R = Red, G = Green, B = Blue, Y = Yellow, P = Purple, C = Cyan
+				</p>
+				<div class="col-sm-12 col-md-offset-2 col-md-8">
+					<img class="post-image" src="Pictures/4.2.2.2.png" width="100%"/>
+				</div>
 			</div>
 		</div>
 	</section>
