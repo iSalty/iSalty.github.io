@@ -132,7 +132,7 @@
 					Because the LEDs used in this assembly are common anode, 5v is put into the common anode and the current flows through wherever there is a voltage differential. Consequently, it runs backwards, in a sense. For example, if Red was the desired color of the LED, the pins would have to be controlled in the following way, [B:1, G:1, R:0, Pow:1]. This way there is only a voltage difference between the voltage input (anode) and the desired return path, red; thus, the LED turns red. 
 				</p>
 				<p class="post-text">
-					The MCP23S17 also added the functionality of being able to write to it a whole byte at a time. This allows us to control one side (2 LEDs)of the MCP23S17 with a single write command. Thus defining the colors as hexadecimal values would make the process of doing this much easier. A table of the colors and their equivalent Hex values is shown below. This will come in handy later when we examine the code that conducts the LEDs during runtime. 
+					The MCP23S17 also added the functionality of being able to write to it a whole byte at a time. This allows us to control one side (2 LEDs) of the MCP23S17 with a single write command. Thus defining the colors as hexadecimal values would make the process of doing this much easier. A table of the colors and their equivalent Hex values is shown below. This will come in handy later when we examine the code that conducts the LEDs during runtime. 
 				</p>
 				<p class="col-sm-offset-1 col-md-offset-3" style="font-size: 1.4rem">
 						K = Black, W = White, R = Red, G = Green, B = Blue, Y = Yellow, P = Purple, C = Cyan
