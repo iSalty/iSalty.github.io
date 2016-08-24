@@ -126,7 +126,7 @@
 					The reason we needed so many extra ports was because each individual RGB LED required 4 GPIO pins to be controlled. The four pins would control the Red, Green, and Blue pins, as well as Power to the LED. Below, you can see a pin diagram the RGB LEDs we used and the scheme used to hook them up to the MCP2317s to be controlled.   
 				</p>
 				<div>
-					<img class="post-image" src="Pictures/rgbLED_MCP.png"/>
+					<img class="post-image" src="Pictures/rgbLED_MCP.PNG"/>
 				</div>
 				<p class="post-text">
 					Because the LEDs used in this assembly are common anode, 5v is put into the common anode and the current flows through wherever there is a voltage differential. Consequently, it runs backwards, in a sense. For example, if Red was the desired color of the LED, the pins would have to be controlled in the following way, [B:1, G:1, R:0, Pow:1]. This way there is only a voltage difference between the voltage input (anode) and the desired return path, red; thus, the LED turns red. 
