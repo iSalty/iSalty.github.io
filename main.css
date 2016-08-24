@@ -88,6 +88,7 @@ nav a:hover {
 .post-image {
   display: block;
   margin: 0 auto;
+  padding-bottom: 10px;
 }
 
 .post-bullets {
