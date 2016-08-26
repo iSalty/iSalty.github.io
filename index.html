@@ -175,11 +175,13 @@
 					It took some time to figure out how to properly talk to the MCP23S17 chips in the code but one specific library was my saving grace, <a href="http://wiringpi.com/" target="_blank">wiringPi</a> by drogon. This specific library has a lot of built in functionality for interfacing with some chips commonly used with the RPi. It provided a simple way to conduct the MCP23S17 chips over the SPI interface.
 				</p>
 				<p class="post-text">
+					Anyway, once I was able to figure out how to work with 4 LEDs connected to one of the MCP23S17 chips it became apparent how we were going to be able to scale up to deal with 48 LEDs. Initially we wanted to design the device to be on Printed Circuit Boards. However, when looking into the moetary cost and, even more importantly, the time cost to have them made and shipped to us we realized that going down this route would leave us with little wiggle room if something were to go wrong. Therefore, we elected to design the product on <a href="https://www.adafruit.com/product/591" target="_blank">solderable breadboards</a>, specialized for prototyping. The solderable breadboards would give us the most flexibility if we made a mistake and were also significantly cheaper than doing the layout on a printed circuit board. The solderable breadboard layout I came up with can be seen below.  
 				</p>
 				<div>
 					<img class="post-image" src="Pictures/SolderableBreadboardLayout.png" height="400px"/>
 				</div>
 				<p class="post-text">
+					As you can see in the diagram above, there would be four boards making up the LED Bike Wheel assembly. Each board contains 12 LEDs and the chips needed to control them as well as the appropriate resistors (all 1k&#937). At the top of each board is a Hall effect sensor which is responsible for keeping track of the rate of rotation of the wheel and will be talked about more in a later post.
 				</p>
 			</div>
 		</div>
@@ -209,6 +211,7 @@
 					You can see what a mess the wires were on the back of the board, thus the back of the LED Bike Wheel assembly came to be known as the "rat's nest". However, we didn't want the loose wires to get caught on the bike as it was in motion so we took care to neatly zip-tie them to each other as well as to the spokes of the bike wheel (this can be seen in a later post with the full assembly on the bike). 
 				</p>
 				<p class="post-text">
+					Now that the actual hardware portion of the build was complete it was time to focus on the software. The software would handle how to coordinate all 48 LEDs in order to generate a standing image on the bike wheel. But first things first, we just wanted to see if our hack job of a hardware prototype could light up. I had written <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/rainbow.py" target="_blank">some code here</a> in which I could specify the colors of 12 LEDs and it was finally time to test it out. Unsurprisingly, on the first try, nothing happened. After checking the wiring with a digital multimeter, swapping out a few resistors, and resoldering some wires we were able to get it working. Below you can see an image of all 12 LEDs lighting up in a rainbow fashion.
 				</p>
 				<div class="post-image">
 					<img src="Pictures/boardAssembleLit.jpg" width="100%"/>
