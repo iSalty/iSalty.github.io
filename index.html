@@ -178,7 +178,7 @@
 					Anyway, once I was able to figure out how to work with 4 LEDs connected to one of the MCP23S17 chips it became apparent how we were going to be able to scale up to deal with 48 LEDs. Initially we wanted to design the device to be on Printed Circuit Boards. However, when looking into the moetary cost and, even more importantly, the time cost to have them made and shipped to us we realized that going down this route would leave us with little wiggle room if something were to go wrong. Therefore, we elected to design the product on <a href="https://www.adafruit.com/product/591" target="_blank">solderable breadboards</a>, specialized for prototyping. The solderable breadboards would give us the most flexibility if we made a mistake and were also significantly cheaper than doing the layout on a printed circuit board. The solderable breadboard layout I came up with can be seen below.  
 				</p>
 				<div>
-					<img class="post-image" src="Pictures/SolderableBreadboardLayout.png" height="400px"/>
+					<img class="post-image" src="Pictures/SolderableBreadboardLayout.PNG" height="400px"/>
 				</div>
 				<p class="post-text">
 					As you can see in the diagram above, there would be four boards making up the LED Bike Wheel assembly. Each board contains 12 LEDs and the chips needed to control them as well as the appropriate resistors (all 1k&#937). At the top of each board is a Hall effect sensor which is responsible for keeping track of the rate of rotation of the wheel and will be talked about more in a later post.
