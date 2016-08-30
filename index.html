@@ -154,7 +154,7 @@
 						K = Black, W = White, R = Red, G = Green, B = Blue, Y = Yellow, P = Purple, C = Cyan
 				</p>
 				<div class="col-sm-12 col-lg-offset-2 col-lg-9">
-					<img class="post-image" src="Pictures/4.2.2.2.png" width="100%"/>
+					<img class="post-image" src="Pictures/4.2.2.2.PNG" width="100%"/>
 				</div>
 			</div>
 		</div>
@@ -274,7 +274,7 @@
 					Initially, the text file (created from the polarRead program) is read in which contains the list of 4320 color characters (12x360), multiple text files can be read; each representing a single frame of an image. Using multiple frames in quick succession allows the LED Bike Wheel to display animations. Now that the color characters are available, they need to be translated into something the computer can understand to properly output to the LEDs, therefore they are translated into bytes using the scheme seen back in post: LED Bike Wheel 4. I have shown the table below again to demonstrate how the color characters are represented in hex.
 				</p>
 				<div>
-					<img class="post-image" src="Pictures/4.2.2.2.png">
+					<img class="post-image" src="Pictures/4.2.2.2.PNG">
 				</div>
 				<p class="post-text">
 					A byte is 8 bits, a hexidecimal number is 4 bits, therefore two hex numbers make up a byte. This means that a byte carries with it the data for the colors of two LEDs (1 hex value per LED). The wiringPi library allows us to write to the MCP23S17 using a buffer containing two bytes of information. Because of this we want to combine our hex values into bytes which we then represent in decimal. This process proved to be more complicated than it initially seemed due to the way in which we wired up the LEDs to the MCP23S17 chips. Below I have shown a set of data which had been taken from the color characters, to hex, and finally to decimal. The whole process of going from color characters to decimal values happens within the first 140 lines of <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/LEDcontrol.py" target="_blank">LEDcontrol.py</a>. The write commands that actually send the data out (wiringPiSPIDataRW(_)) to the LEDs can be seen around lines 911-922 of the code.
