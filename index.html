@@ -91,7 +91,7 @@
 				</p>
 				<ul class="post-bullets">
 					<li><a href="http://www.monkeylectric.com/monkey_light_pro/" target="_blank">MonkeyLectric's Monkey Light Pro</a></li>
-					<li><a href="" target="_blank">Some other project</a></li>
+					<li><a href="http://revolights.com/" target="_blank">Revolights</a></li>
 				</ul>
 				<p class="post-text">
 					The MonkeyLectric one is really quite impressive with the quality of the images they are able to recreate. Nevertheless, they have encountered some problems which we have improved upon. MonkeyLectric's product uses Bluetooth to transfer the images from a phone (only iOs at the moment) and does the image processing on the phone as well. After looking through the MonkeyLectric forums we identified that the Bluetooth transfer rate was slow and the processing on phone would drain people's battery and even cause some heat problems. Therefore we elected to have our device work over WiFi (capable of recieving transfers from any internet connected device) and to do the necessary image processing on the bike wheel assembly. Knowing that we needed a pretty powerful system we elected to go with a Raspberry Pi 2: Model B+. It has an ARM compatible CPU which has a clock rate of 900MHz which we could then easily overclock to 1000MHz and is trivial to connect to WiFi (using a $5 WiFi dongle).
@@ -153,8 +153,8 @@
 				<p class="col-sm-offset-1 col-md-offset-3" style="font-size: 1.4rem">
 						K = Black, W = White, R = Red, G = Green, B = Blue, Y = Yellow, P = Purple, C = Cyan
 				</p>
-				<div class="col-sm-12 col-lg-offset-2 col-lg-8">
-					<img class="post-image" src="Pictures/4.2.2.2.PNG" width="100%"/>
+				<div class="col-sm-12 col-lg-offset-2 col-lg-9">
+					<img class="post-image" src="Pictures/4.2.2.2.png" width="100%"/>
 				</div>
 			</div>
 		</div>
@@ -220,6 +220,73 @@
 		</div>
 		<!-- End of LED Bike Wheel Post # 6 -->
 
+		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		
+		<!-- LED Bike Wheel Post # 7 -->
+		<div class="row">
+			<div class="col-sm-2">
+				<img class="user-img" src="http://images.clipartpanda.com/hercules-clip-art-hercules001.gif"/>
+				<h5 class="author">iSaltwick</h5> 
+				<h5 class="post-date">August 26, 2016</h5>
+			</div>
+			<div class="col-md-8 col-sm-10">
+				<h3 class="post-title">LED Bike Wheel: 7</h3>
+				<p class="post-text">
+					In software there are two programs which are central to the design; polarRead and LEDcontrol. Both programs are written in python and operate on the Raspberry Pi which is located on the bike wheel. PolarRead does the image processing before the image can be displayed, and LEDcontrol outputs the proper image to the LEDs on the Bike Wheel. We will look at polarRead.py in more detail here.
+				</p>
+				<p class="post-text">
+					<a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/polarRead.py" target="_blank">PolarRead.py</a> is the program responsible for reading in any image, determining what colors the LEDs should be at each point of the display and saving the data to be used in the other program, LEDcontrol. An image editing library, OpenCV, was utilized in this program because it contains functions already written which are relevant and usable in our design. This image library allows the software to do the appropriate image processing on any type of image (.jpg, .gif, .png, etc). First, the image is read in, then it is resized to 360px by 360px so that a constant resolution is achieved for the bike wheel display. This resolution contains data for 360 degrees of rotation which is necessary to have an image detailed enough to display well on the bike wheel. 
+				</p>
+				<p class="post-text">
+					Next the image has to be converted from Cartesian (x, y) coordinates to polar coordinates (r, θ). Polar coordinates contain data on the radius(r) and angle(θ) of each pixel and, therefore, provide a simpler way to track where the LED boards are and what color they should be as they rotate with the wheel. The function to go from Cartesian coordinates to polar has already been written in the openCV library and is used in this program to do the transformation. However, it is still necessary to understand how this function works in order to properly extract the desired data from its output. A demonstration of its operation is shown in the figure below. Cartesian image (left) to Polar image (right).
+				</p>
+				<div class="col-sm-12">
+					<img class="post-image" src="Pictures/polarRead_prntScrn1.jpg"/>
+				</div>
+				<p class="post-text">
+					The black line shown in the Cartesian image indicates the line where the transformation begins. It takes this line of colors and prints it at the top of the polar image assigning it θ = 0&deg. The transformation then proceeds, swinging the black line around clockwise and printing down on the polar image, every degree rotation clockwise on the cartesian image corresponds to one new row on the polar image. The left side of the polar image represents colors closer to the center of the cartesian image, and the right side of the polar image represents colors furthest away from the center.
+				</p>
+				<p class="post-text">
+					Once the image is in polar format it is easy to extract the relavent color data. Because there are 12 LEDs on each LED board we need to find what color each LED is at each degree of the image, thus we need 12 colors for each degree of the 360 degrees of rotation. This program looks at 12 equidistant pixels for each degree, determines their colors and saves it as a color character (a letter representing the color). These color characters are then saved into a text file which is utilized in the LEDcontrol program. A selection of the color characters saved for the above image can be seen below (again left = centermost). 
+				</p>
+				<div>
+					<img class="post-image" src="Pictures/polarRead_prntScrn2.jpg"/>
+				</div>
+			</div>
+		</div>
+		<!-- End of LED Bike Wheel Post # 7 -->
+
+		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		
+		<!-- LED Bike Wheel Post # 8 -->
+		<div class="row">
+			<div class="col-sm-2">
+				<img class="user-img" src="http://images.clipartpanda.com/hercules-clip-art-hercules001.gif"/>
+				<h5 class="author">iSaltwick</h5> 
+				<h5 class="post-date">August 29, 2016</h5>
+			</div>
+			<div class="col-md-8 col-sm-10">
+				<h3 class="post-title">LED Bike Wheel: 8</h3>
+				<p class="post-text">
+					Finally, we can take a look at the second program <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/LEDcontrol.py" target="_blank">LEDcontrol.py</a> which is the program that actually runs while the bike wheel is in motion. It is responsible for keeping track of the speed of the bike as well as updating the LEDs with the correct colors every single degree of rotation (can be as fast as once every millisecond). Here I will delve a bit into how the program functions to accomplish this. 
+				</p>
+				<p class="post-text">
+					Initially, the text file (created from the polarRead program) is read in which contains the list of 4320 color characters (12x360), multiple text files can be read; each representing a single frame of an image. Using multiple frames in quick succession allows the LED Bike Wheel to display animations. Now that the color characters are available, they need to be translated into something the computer can understand to properly output to the LEDs, therefore they are translated into bytes using the scheme seen back in post: LED Bike Wheel 4. I have shown the table below again to demonstrate how the color characters are represented in hex.
+				</p>
+				<div>
+					<img class="post-image" src="Pictures/4.2.2.2.png">
+				</div>
+				<p class="post-text">
+					A byte is 8 bits, a hexidecimal number is 4 bits, therefore two hex numbers make up a byte. This means that a byte carries with it the data for the colors of two LEDs (1 hex value per LED). The wiringPi library allows us to write to the MCP23S17 using a buffer containing two bytes of information. Because of this we want to combine our hex values into bytes which we then represent in decimal. This process proved to be more complicated than it initially seemed due to the way in which we wired up the LEDs to the MCP23S17 chips. Below I have shown a set of data which had been taken from the color characters, to hex, and finally to decimal. The whole process of going from color characters to decimal values happens within the first 140 lines of <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/LEDcontrol.py" target="_blank">LEDcontrol.py</a>. The write commands that actually send the data out (wiringPiSPIDataRW(_)) to the LEDs can be seen around lines 911-922 of the code.
+				</p>
+				<div>
+					<img class="post-image" src="Pictures/realDeal_prntScrn.jpg">
+				</div>
+				<p class="post-text">
+					You will notice how things in the hex list seem out of place, this is due to the 'complexity' mentioned above with the way that the LEDs were wired to the MCP23S17 chips. This was done to keep track of which LEDs are located in the positions that the Most Significant Bits control. Therefore the hex list looks to the second color char then to the first, then to the fourth, then to the third, and so on.  
+				</p>
+			</div>
+		</div>
 	</section>
 	<footer class="container">
   		<div class="row">

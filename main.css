@@ -89,6 +89,7 @@ nav a:hover {
   display: block;
   margin: 0 auto;
   padding-bottom: 10px;
+  max-width: 100%;
 }
 
 .post-bullets {
@@ -98,7 +99,6 @@ nav a:hover {
 .post-video {
   text-align: center;
 }
-
 
 section.container {
   margin: 0 0 0 0;
