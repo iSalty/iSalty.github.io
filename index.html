@@ -139,7 +139,7 @@
 					I had shown that the LEDs could be controlled simply through the Raspberry Pi's GPIO pins. However, we wanted a lot of LEDs on our bike wheel (48 to be exact) and there simply were not enough GPIO pins on the RPi to accomodate that number of LEDs. After some research we elected to go with adding GPIO expander chips from Microchip (the MCP23S17) which would add 16 GPIO ports per chip. In theory the RPi could accomodate adding up to 16 MCP23S17s, we ended up using 12. 
 				</p>
 				<p class="post-text">
-					The reason we needed so many extra ports was because each individual RGB LED required 4 GPIO pins to be controlled. The four pins would control the Red, Green, and Blue pins, as well as Power to the LED. Below, you can see a pin diagram the RGB LEDs we used and the scheme used to hook them up to the MCP2317s to be controlled.   
+					The reason we needed so many extra ports was because each individual RGB LED required 4 GPIO pins to be controlled. The four pins would control the Red, Green, and Blue pins, as well as Power to the LED. Below, you can see a pin diagram the RGB LEDs and the scheme used to hook them up to the MCP2317s to be controlled.   
 				</p>
 				<div>
 					<img class="post-image" src="Pictures/rgbLED_MCP.PNG"/>
@@ -175,7 +175,7 @@
 					It took some time to figure out how to properly talk to the MCP23S17 chips in the code but one specific library was my saving grace, <a href="http://wiringpi.com/" target="_blank">wiringPi</a> by drogon. This specific library has a lot of built in functionality for interfacing with some chips commonly used with the RPi. It provided a simple way to conduct the MCP23S17 chips over the SPI interface.
 				</p>
 				<p class="post-text">
-					Anyway, once I was able to figure out how to work with 4 LEDs connected to one of the MCP23S17 chips it became apparent how we were going to be able to scale up to deal with 48 LEDs. Initially we wanted to design the device to be on Printed Circuit Boards. However, when looking into the moetary cost and, even more importantly, the time cost to have them made and shipped to us we realized that going down this route would leave us with little wiggle room if something were to go wrong. Therefore, we elected to design the product on <a href="https://www.adafruit.com/product/591" target="_blank">solderable breadboards</a>, specialized for prototyping. The solderable breadboards would give us the most flexibility if we made a mistake and were also significantly cheaper than doing the layout on a printed circuit board. The solderable breadboard layout I came up with can be seen below.  
+					Anyway, once I was able to figure out how to work with 4 LEDs connected to one of the MCP23S17 chips it became apparent how we were going to be able to scale up to deal with 48 LEDs. Initially we wanted to design the device to be on Printed Circuit Boards. However, when looking into the monetary cost and, even more importantly, the time cost to have them made and shipped to us we realized that going down this route would leave us with little wiggle room if something were to go wrong. Therefore, we elected to design the product on <a href="https://www.adafruit.com/product/591" target="_blank">solderable breadboards</a>, specialized for prototyping. The solderable breadboards would give us the most flexibility if we made a mistake and were also significantly cheaper than doing the layout on a printed circuit board. The solderable breadboard layout I came up with can be seen below.  
 				</p>
 				<div>
 					<img class="post-image" src="Pictures/SolderableBreadboardLayout.PNG" height="400px"/>
@@ -247,7 +247,7 @@
 					The black line shown in the Cartesian image indicates the line where the transformation begins. It takes this line of colors and prints it at the top of the polar image assigning it θ = 0&deg. The transformation then proceeds, swinging the black line around clockwise and printing down on the polar image, every degree rotation clockwise on the cartesian image corresponds to one new row on the polar image. The left side of the polar image represents colors closer to the center of the cartesian image, and the right side of the polar image represents colors furthest away from the center.
 				</p>
 				<p class="post-text">
-					Once the image is in polar format it is easy to extract the relavent color data. Because there are 12 LEDs on each LED board we need to find what color each LED is at each degree of the image, thus we need 12 colors for each degree of the 360 degrees of rotation. This program looks at 12 equidistant pixels for each degree, determines their colors and saves it as a color character (a letter representing the color). These color characters are then saved into a text file which is utilized in the LEDcontrol program. A selection of the color characters saved for the above image can be seen below (again left = centermost). 
+					Once the image is in polar format it is easy to extract the relavent color data. Because there are 12 LEDs on each LED board we need to find what color each LED is at each degree of the image, thus we need 12 colors for each degree of the 360 degrees of rotation. This program looks at 12 equidistant pixels for each degree, determines their colors and saves it as a color character (a letter representing the color). These color characters are then saved into a text file which is later utilized in the LEDcontrol program. A selection of the color characters saved for the above image can be seen below (again left = centermost). 
 				</p>
 				<div>
 					<img class="post-image" src="Pictures/polarRead_prntScrn2.jpg"/>
@@ -283,7 +283,7 @@
 					<img class="post-image" src="Pictures/realDeal_prntScrn.jpg">
 				</div>
 				<p class="post-text">
-					You will notice how things in the hex list seem out of place, this is due to the 'complexity' mentioned above with the way that the LEDs were wired to the MCP23S17 chips. This was done to keep track of which LEDs are located in the positions that the Most Significant Bits control. Therefore the hex list looks to the second color char then to the first, then to the fourth, then to the third, and so on.  
+					You will notice how things in the hex list seem out of place, this is due to the 'complexity' mentioned above with the way that the LEDs were wired to the MCP23S17 chips. This was done to keep track of which LEDs are located in the positions that the Most Significant Bits control. Therefore the hex list looks to the second color character then to the first, then to the fourth, then to the third, and so on.  
 				</p>
 			</div>
 		</div>
