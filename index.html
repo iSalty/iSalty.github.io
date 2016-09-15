@@ -45,7 +45,7 @@
 		</div>
 		<!-- End of About this site Post -->
 
-		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		<hr/>
 		
 		<!-- LED Bike Wheel Post # 1 -->
 		<div class="row">
@@ -75,7 +75,7 @@
 		</div>
 		<!-- End of LED Bike Wheel Post # 1 -->
 
-		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		<hr/>
 		
 		<!-- LED Bike Wheel Post # 2 -->
 		<div class="row">
@@ -100,7 +100,7 @@
 		</div>
 		<!-- End of LED Bike Wheel Post # 2 -->
 
-		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		<hr/>
 		
 		<!-- LED Bike Wheel Post # 3 -->
 		<div class="row">
@@ -115,7 +115,7 @@
 					Now that we had decided what the product was supposed to be and do, it was time to get to work on actually prototyping it. First up was learning how to work with the Raspberry Pi. It was the first time any of us had worked with microcontrollers like this, fortunatley, the RPi is what is termed a microcomputer. Basically it is a fully functional computer, just miniaturized, complete with a GUI for the desktop and file system. We utilized the Raspbian Jessie operating system which is built on Linux. Therefore, eventhough it has a fully function GUI, it was still beneficial to learn how to work within the command line because of how useful it is on Linux platforms. 
 				</p>
 				<p class="post-text">
-					After fimiliarizing myself with the command line I decided that I wanted to write my first program on the RPi and have it light up some LEDs. The Raspberry Pi has great built in functionality with Python programs and therefore Python was the language of choice when writing most of my programs. Again, I had some learning to do because I had never written a program in Python. I did, however, have a good working knowledge of C++ so it came to me quick. Using these <a href="https://www.adafruit.com/products/302?gclid=Cj0KEQjw6O-9BRDjhYXH2bOb8Z4BEiQAWRdukxl-JQYDdKpD95jpF_yId-9EI2LiMlpYy1B5FyyQqVoaAvEP8P8HAQ" target="_blank">common anode RGB LEDs</a> I purchased from Adafruit and some resistors I had lying around I was able to quickly whip up <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/colorFunc.py" target="_blank">this program</a>. The program changes the colors of two LEDs simply by controlling specific GPIO pins to be on or off. A video of the program running can be seen below.
+					After fimiliarizing myself with the command line I decided that I wanted to write my first program on the RPi and have it light up some LEDs. The Raspberry Pi has great built in functionality with Python programs and therefore Python was the language of choice when writing most of my programs. Again, I had some learning to do because I had never written a program in Python before. I did, however, have a good working knowledge of C++ so it came to me quick. Using these <a href="https://www.adafruit.com/products/302?gclid=Cj0KEQjw6O-9BRDjhYXH2bOb8Z4BEiQAWRdukxl-JQYDdKpD95jpF_yId-9EI2LiMlpYy1B5FyyQqVoaAvEP8P8HAQ" target="_blank">common anode RGB LEDs</a> I purchased from Adafruit and some resistors I had lying around I was able to quickly whip up <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/colorFunc.py" target="_blank">this program</a>. The program changes the colors of two LEDs simply by controlling specific GPIO pins to be on or off. A video of the program running can be seen below.
 				</p>
 				<div class="post-video">
 					<iframe width="420" height="315" src="https://www.youtube.com/embed/B8FuRu6dYN0" frameborder="0" allowfullscreen></iframe>
@@ -124,7 +124,7 @@
 		</div>
 		<!-- End of LED Bike Wheel Post # 3 -->
 
-		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		<hr/>
 
 		<!-- LED Bike Wheel Post # 4 -->
 		<div class="row">
@@ -160,7 +160,7 @@
 		</div>
 		<!-- End of LED Bike Wheel Post # 4 -->
 
-		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		<hr/>
 		
 		<!-- LED Bike Wheel Post # 5 -->
 		<div class="row">
@@ -187,7 +187,7 @@
 		</div>
 		<!-- End of LED Bike Wheel Post # 5 -->
 
-		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		<hr/>
 		
 		<!-- LED Bike Wheel Post # 6 -->
 		<div class="row">
@@ -220,7 +220,7 @@
 		</div>
 		<!-- End of LED Bike Wheel Post # 6 -->
 
-		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		<hr/>
 		
 		<!-- LED Bike Wheel Post # 7 -->
 		<div class="row">
@@ -256,7 +256,7 @@
 		</div>
 		<!-- End of LED Bike Wheel Post # 7 -->
 
-		<hr style="width: 100%; color: #222; height: 1px; background-color:#444;"/>
+		<hr/>
 		
 		<!-- LED Bike Wheel Post # 8 -->
 		<div class="row">
@@ -287,6 +287,121 @@
 				</p>
 			</div>
 		</div>
+		<!-- End of LED Bike Wheel Post # 8 -->
+
+		<hr/>
+		<!-- LED Bike Wheel Post # 9 -->
+		<div class="row">
+			<div class="col-sm-2">
+				<img class="user-img" src="http://images.clipartpanda.com/hercules-clip-art-hercules001.gif"/>
+				<h5 class="author">iSaltwick</h5> 
+				<h5 class="post-date">September 14, 2016</h5>
+			</div>
+			<div class="col-md-8 col-sm-10">
+				<h3 class="post-title">LED Bike Wheel: 9</h3>
+				<p class="post-text">
+					At this point we have all of the necessary information regarding the colors of the display saved into the Decimal List seen in the previous post's image. Each decimal represents two Hexadecimal values and each hex value represents a single LED's color (in other words each decimal number in the above list represents 2 LED's colors). Now we needed a method to grab the right colors from the decimal list given any particular location of the LED boards. To do this I created a function called Degree (located at line 726 in <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/LEDcontrol.py" target="_blank">LEDcontrol.py</a>) which would take the angle of LED board 1 as an input and output the relevant color data for all four boards.
+				</p>
+				<p class="post-text">
+					How it knows which values to pick from the long list of decimal values is demonstrated in an example below. Say we want the colors relevant to Frame 1 at Θ = 175&deg. (Θ is the position of LED board 1) Knowing that each stick is 90&deg apart, the other stick angles can be found.
+				</p>
+				<div>
+					<img class="post-image" src="Pictures/degreeEquations.PNG">
+				</div>
+				<p class="post-text">
+					Here is a visual representation of how the degrees are represented on the bike wheel. I choose this system because it is the same way that the cartesian to polar transformation occured (seen back in LED Bike post #7).
+				</p>
+				<div>
+					<img class="post-image" src="Pictures/RearWheelCoordinates.jpg">
+				</div>
+				<p class="post-text">
+					All of the color data is stored in the list colorsDecimal which contains 2160 decimal values per frame. Each degree corresponds to 6 decimals of that list because each decimal represents the colors of 2 LEDs (12 colors need to be represented at each degree because there are 12 LEDs on one LED board). We want to find those 6 decimal values for the degrees 175, 265, 355, and 85. Frame 1 is the first frame of the list. The following equation is used to get the starting and ending points that we require from the colorsDecimal list/array.
+				</p>
+				<div>
+					<img class="post-image" src="Pictures/degreeEquations2.PNG">
+				</div>
+				<p class="post-text">
+					Above we see the starting and stopping points needed to get the colors for LED boards 1 and 2, the same method is emplyed to get the colors for boards 3 and 4. The degree function will return the 24 decimal values selected using the above equations which can then be sent out to the MCP23S17 chips to turn the LEDs the proper colors. We were now able to run a test of our prototyped board to see if this software piece was retrieving the correct colors and displaying properly. It turns out on the first try it worked! Below you can see a video of LED stick 1 lighting up the proper colors to display the image on the screen. Imagine the stick rotating in a counter-clockwise direction in order to create the image (goes blue then purple, red, yellow, green, cyan and so on). In this video I just used a static RPM value for testing.
+				</p>
+				<div class="post-video">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/ybZIKRL-arc" frameborder="0" allowfullscreen></iframe>
+				</div>	
+			</div>
+		</div>
+		<!-- End of LED Bike Wheel Post # 9 -->
+
+		<hr/>
+
+		<!-- LED Bike Wheel Post # 10 -->
+		<div class="row">
+			<div class="col-sm-2">
+				<img class="user-img" src="http://images.clipartpanda.com/hercules-clip-art-hercules001.gif"/>
+				<h5 class="author">iSaltwick</h5> 
+				<h5 class="post-date">September 15, 2016</h5>
+			</div>
+			<div class="col-md-8 col-sm-10">
+				<h3 class="post-title">LED Bike Wheel: 10</h3>
+				<p class="post-text">
+					Now all we have left to do is figure out how to keep track of where the LED boards are in their rotation about the wheel and how fast they are moving (RPM) and feed that information to the Degree function talked about before. Hall effect sensors and timing play a pivotal role in this section of the design. The hall effect sensor (shown in the diagram below to the right) outputs a signal whenever it is in the presence of a magnetic field. That magnetic field will be coming from a magnet attached to the frame of the bike, external to the moving wheel (The magnet is notified by that blue circle on the left-most image below).
+				</p>
+				<div>
+					<img class="post-image" src="Pictures/rearWheelHall.PNG">
+				</div>
+				<p class="post-text">
+					The hall sensor is fed with 5V and is pulled up with a 1kOhm resistor. Therefore, it outputs 5V when there is no magnetic field and drops down to 0V when there is a magnetic field present. Vout feeds back to the Raspberry Pi where it is constantly reading the input of the hall sensor. As soon as the hall sensor passes the magnet on the bike frame it drops to 0V and the Raspberry Pi knows it just passed the magnet i.e., where it is in its rotation. 
+				</p>
+				<p class = "post-text">
+					Using this information to ascertain the RPM of the wheel is fairly simple. Take a time reading when it passes the magnet, take another time reading when the next one passes the magnet. Take the difference between the two times and you have the time it took for the wheel to rotate 90 degrees (because each LED board is 90 degrees apart). Multiply that number by 4 to get how many seconds it takes to do 1 full rotation (this is Seconds Per Rotation). Invert seconds per rotation to get rotations per second, then multiply by 60 to get rotations per minute (RPM). The library which allows the RPi to get readings of the time in seconds is aptly named, <a href="https://docs.python.org/2/library/time.html" target="_blank">Time</a> and is used throughout the program for this purpose. However, using the method stated above for calculating RPM, readings only occur every 90 degrees of rotation. Therefore the RPi on really knows for sure where the LED boards are at these exact moments of reading, it has to guess where they are inbetween readings using the calculated RPM value.
+				</p>
+				<p class="post-text">
+					These guesses attempt to figure out when the wheel has rotated one degree by <u>assuming that the RPM stays constant between readings</u>. How we do this is using the calculated RPM value we are able to find the time it would take to rotate 1 degree (using rotations per second divided by 360 degrees). It then waits that amount of time before sending out the next LED write commands, thus, updating the display every degree of rotation. While it may get slightly off between readings it is corrected every quarter of a rotation when the next reading occurs. This effect is barely perceptable to veiwers because it happens so quickly that the assumption of the RPM not changing between readings is close enough to reality. 
+				</p>
+			</div>
+		</div>
+		<!-- End of LED Bike Wheel Post # 10 -->
+
+		<hr/>
+
+
+		<!-- LED Bike Wheel Post # 11 -->
+		<div class="row">
+			<div class="col-sm-2">
+				<img class="user-img" src="http://images.clipartpanda.com/hercules-clip-art-hercules001.gif"/>
+				<h5 class="author">iSaltwick</h5> 
+				<h5 class="post-date">September 16, 2016</h5>
+			</div>
+			<div class="col-md-8 col-sm-10">
+				<h3 class="post-title">LED Bike Wheel: 11</h3>
+				<p class="post-text">
+					We have finally completed the design. The RPM tracking and the color retrieving functions were working just as expected. After some final testing and more resoldering to fix some loose wires it was time to put the entire assembly on the bike wheel. I will show you again what the setup is so that we can see the design and the actual prototype side by side.
+				</p>
+				<div>
+					<img class="post-image" src="Pictures/SolderableBreadboardLayout.PNG" height="400px"/>
+				</div>
+				<div style="text-align: center;">
+					<img src="Pictures/Prototype_Back.jpg" height="394px" style="margin-bottom: 15px;"/>
+					<img src="Pictures/Prototype_Front_lit.PNG" height="394px" style="margin-bottom: 15px;"/>
+				</div>
+				<p class="post-text">
+					The battery we used was a simple power bank, meant to be used for charging phones and the like. It had a capacity of 4400mAh which would give us over 6 hours of operation on a single charge and worked perfectly for powering the whole assembly. It was finally time to give the wheel a spin and see if it did indeed create the desired image as a standing image on the bike wheel. First, I show how a single LED board would look as it goes about the rotation and second a video of the whole assembly coming together to produce the image.
+				</p>
+				<div class="post-video">
+					<iframe width="300" height="400" src="https://www.youtube.com/embed/_-Dj4on961s" frameborder="0" allowfullscreen></iframe>
+					<iframe width="300" height="400" src="https://www.youtube.com/embed/3JCiKtywYF4" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<p class="post-text">
+					Keep in mind that it looks better in real life because it is hard for cameras to capture the Persistence of Vision effect. In fact we found that the worse the camera was, the better it was able to capture the image. After playing around with a few images we realized that the image quality was not quite as good as we thought it might be so we had to display very simple images. This was due to the fact that there were only 12 LEDs on each board, effectivley limiting the resolution of the image. However the display was still bright and visually pleasing and we were thrilled with the results.
+				</p>
+				<p class="post-text">
+					After our demonstration I continued to ride the LED Bike around Tempe for two months before retiring it. I received a lot of looks and comments (which was exactly the point) and had a great time telling people how my group had made it. It was a fantastic project to be involved in from beginning to end and I personally think it was one of the coolest senior design projects of our class (but who wouldn't think their own project was the best). I will end the LED Bike Wheel project posts with my favorite picture of myself (in the purple) and my teammates at demo-day showing off our stellar project.
+				</p>
+				<div>
+					<img class="post-image" src="Pictures/demo_day.jpg"
+				</div>
+			</div>
+		</div>
+		<!-- End of LED Bike Wheel Post # 11 -->
+
 	</section>
 	<footer class="container">
   		<div class="row">
