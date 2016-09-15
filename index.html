@@ -300,7 +300,7 @@
 			<div class="col-md-8 col-sm-10">
 				<h3 class="post-title">LED Bike Wheel: 9</h3>
 				<p class="post-text">
-					At this point we have all of the necessary information regarding the colors of the display saved into the Decimal List seen in the previous post's image. Each decimal represents two Hexadecimal values and each hex value represents a single LED's color (in other words each decimal number in the above list represents 2 LED's colors). Now we needed a method to grab the right colors from the decimal list given any particular location of the LED boards. To do this I created a function called Degree (located at line 726 in <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/LEDcontrol.py" target="_blank">LEDcontrol.py</a>) which would take the angle of LED board 1 as an input and output the relevant color data for all four boards.
+					At this point we have all of the necessary information regarding the colors of the display saved into the Decimal List seen in the previous post's image. Each decimal represents two Hexadecimal values and each hex value represents a single LED's color (in other words each decimal number in the above list represents 2 LED colors). Now we needed a method to grab the right colors from the decimal list given any particular location of the LED boards. To do this I created a function called Degree (located at line 726 in <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/LEDcontrol.py" target="_blank">LEDcontrol.py</a>) which would take the angle of LED board 1 as an input and output the relevant color data for all four boards.
 				</p>
 				<p class="post-text">
 					How it knows which values to pick from the long list of decimal values is demonstrated in an example below. Say we want the colors relevant to Frame 1 at Θ = 175&deg. (Θ is the position of LED board 1) Knowing that each stick is 90&deg apart, the other stick angles can be found.
@@ -315,13 +315,13 @@
 					<img class="post-image" src="Pictures/RearWheelCoordinates.jpg">
 				</div>
 				<p class="post-text">
-					All of the color data is stored in the list colorsDecimal which contains 2160 decimal values per frame. Each degree corresponds to 6 decimals of that list because each decimal represents the colors of 2 LEDs (12 colors need to be represented at each degree because there are 12 LEDs on one LED board). We want to find those 6 decimal values for the degrees 175, 265, 355, and 85. Frame 1 is the first frame of the list. The following equation is used to get the starting and ending points that we require from the colorsDecimal list/array.
+					All of the color data is stored in the list colorsDecimal which contains 2160 decimal values per frame. Each degree corresponds to 6 decimals of that list because each decimal represents the colors of 2 LEDs (12 colors need to be represented at each degree because there are 12 LEDs on one LED board). For this example we want to find those 6 decimal values for the degrees 175, 265, 355, and 85. Frame 1 is the first frame of the list. The following equation is used to get the starting and ending points that we require from the colorsDecimal list/array.
 				</p>
 				<div>
 					<img class="post-image" src="Pictures/degreeEquations2.PNG">
 				</div>
 				<p class="post-text">
-					Above we see the starting and stopping points needed to get the colors for LED boards 1 and 2, the same method is emplyed to get the colors for boards 3 and 4. The degree function will return the 24 decimal values selected using the above equations which can then be sent out to the MCP23S17 chips to turn the LEDs the proper colors. We were now able to run a test of our prototyped board to see if this software piece was retrieving the correct colors and displaying properly. It turns out on the first try it worked! Below you can see a video of LED stick 1 lighting up the proper colors to display the image on the screen. Imagine the stick rotating in a counter-clockwise direction in order to create the image (goes blue then purple, red, yellow, green, cyan and so on). In this video I just used a static RPM value for testing.
+					Above we see the starting and stopping points needed to get the colors for LED boards 1 and 2, the same method is emplyed to get the colors for boards 3 and 4. The degree function will return the 24 decimal values selected using the above equations which can then be sent out to the MCP23S17 chips to turn the LEDs the proper colors. After completing this section of code we were able to run a test of our prototyped board to see if this software piece was retrieving the correct colors and displaying properly. It turns out on the first try it worked! Below you can see a video of LED stick 1 lighting up the proper colors to display the image on the screen. Imagine the stick rotating in a counter-clockwise direction in order to create the image (goes blue then purple, red, yellow, green, cyan and so on). In this video I just used a static RPM value for testing.
 				</p>
 				<div class="post-video">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/ybZIKRL-arc" frameborder="0" allowfullscreen></iframe>
@@ -373,7 +373,7 @@
 			<div class="col-md-8 col-sm-10">
 				<h3 class="post-title">LED Bike Wheel: 11</h3>
 				<p class="post-text">
-					We have finally completed the design. The RPM tracking and the color retrieving functions were working just as expected. After some final testing and more resoldering to fix some loose wires it was time to put the entire assembly on the bike wheel. I will show you again what the setup is so that we can see the design and the actual prototype side by side.
+					We have finally completed the design. The RPM tracking and the color retrieving functions worked just as expected. After some final testing and more resoldering to fix some loose wires it was time to put the entire assembly on the bike wheel. I will show you again what the setup is so that we can see the design and the actual prototype side by side.
 				</p>
 				<div>
 					<img class="post-image" src="Pictures/SolderableBreadboardLayout.PNG" height="400px"/>
