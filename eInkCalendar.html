@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>iSaltwick e-Ink Calendar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">iSalty.github.io</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#ProjectHub">Projects</a>
+					<li><a href="index.html#About">About</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<!-- <h1>Project</h1> -->
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<h2>E-INK CALENDAR</h2>
+						</header>
+						<p>The e-Ink calendar project stemmed from a need to have a low power calendar device linked to the internet that was battery operated and therefore could be put anywhere. At work we were having difficulty managing people accessing the PCs when others were remotely logged in. I thought a simple calendar showing the booked timeslots would help prevent people from logging in when others had booked the setup and were remotely using it (because you cannot tell from looking at PC if someone is remotely connected to it already). The image below shows the project concept.</p>
+							<ul>
+								<li>Waveshare 2.7" display</li>
+								<li>Rasperry-Pi 3</li>
+								<li>Wifi Connection to access Google Calendar</li>
+							</ul>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/eInkCalendar/ProjectOverview.jpg" >
+						</div>
+						<hr />
+						<h3>E-Ink Working Principle</h3>
+						<p>E-Ink is the perfect solution for a low power display that does not need to update very often. It works by having many little cells with differently charged black and white particles. The display manipulates the color by applying a voltage to the top or bottom electrode which moves the charged particles. Because the display has phyisical moving particles it's relativley slow compared to LED/LCD displays and therefore wouldn't be a good candidate for a TV or computer monitor, however, it has found its niche in ebooks.</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/eInkCalendar/ePaperWorkingPrinciple.gif" style="max-height: 400px">
+							<p style="text-align: right;"><a href="https://www.smartcity-displays.com/how-does-e-paper-work/" target="blank">Image Source</a></p>
+						</div>
+						<hr />
+						<h3>Drawing Image</h3>
+						<p>The e-Ink display basically shows a picture, so in order to have it depict a calendar we have to create the calendar image programatically. I used python library PIL to generate the image section by section <a href="https://github.com/iSalty/eInk-Calendar/blob/main/calendar.py" target="blank">(you can view the code here)</a>. When you finished creating the image object you send it over SPI communication to the e-Ink display and tell it to update. The rest is handled by the display itself with the library given by the manufacturer.</p>
+						<p></p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/eInkCalendar/DrawImage.jpg" style="max-height: 400px">
+						</div>
+						<hr />
+						<h3>Runtime Software Flow</h3>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/eInkCalendar/eInkSoftwareFlowChart.JPG" >
+						</div>
+						<p></p>
+						<p>I wanted to link the calendar to a service that is widley used and since google has an easy to use API that is what I preferred. The user would log into their google account and save their credentials (which are encrypted) on the device so that when the device trys to ping the google server to retrieve the data it has the proper authorization. After that, the device would ping google once every 5 minutes to check to see if there had been any updates to calendar events, if there were changes it would update the display with the new info.</p>
+						<div style="max-height: 400px">
+							<video class="video center" autoplay loop muted playsinline src="images/eInkCalendar/eInkDataChange.mp4"></video>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<a class="anchor" id="About"></a>
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<h3>About Me</h3>
+						<p>I am a young Electrical Engineering from Arizona who is passionate about new levels of interconnection through technology.
+						Starting my career with Ford was an eye-opening experience; learning about the automotive industry, vehicle automation and electrification. It showed me there are a lot of new engineering challenges in the automotive space right now and plenty of opportunities to be involved in meaningful work, not just for the company, but for something bigger. </p>
+					</section>
+					<section>
+						<h3>Education</h3>
+						<ul class="alt">
+							<li><a href="https://engineering.asu.edu/" target="_blank">Arizona State University (BSEE)</a></li>
+							<li><a href="https://barretthonors.asu.edu/about" target="_blank">Barrett, the Honors College.</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Links</h3>
+						<ul class="plain">
+							<li><a href="https://www.linkedin.com/in/ian-saltwick-23591b81/" target="_blank"><i class="icon fa-linkedin">&nbsp;</i>Linkedin</a></li>
+							<li><a href="https://github.com/iSalty" target="_blank"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							<li><a href="https://www.facebook.com/ian.saltwick/photos" target="_blank"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="copyright">
+					&copy; iSaltwick | Design: <a href="https://templated.co">TEMPLATED</a>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!--
+	Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>iSaltwick LED Bike Wheel</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">iSalty.github.io</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#ProjectHub">Projects</a>
+					<li><a href="index.html#About">About</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<!-- <h1>Project</h1> -->
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<h2>LED Bike Wheel</h2>
+						</header>
+						<p>The LED Bike wheel was the senior project for my bachelors degree at Arizona State University. Me and my two other group members came up with the idea because we all rode bikes to campus and wanted to spice up our rides. The idea, at its core, is to create a standing image on the moving bike wheel by precisely controlling LEDs throughout its rotation.</p>
+						<p>Below is a diagram of the physical layout of the deisgn and a picture of the completed LED Bike Wheel.</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/LedBikeWheel/LedBikePhysicalLayout.jpg" >
+						</div>
+						<hr />
+						<h3>Working Principle</h3>
+						<p>The LED Bike wheel only has 4 sticks of LEDs, but when rotating it creates the illusion that whole wheel is continuous display. This is due to the phenomenon called <u><strong>Persistence of Vision</strong></u>, basically, our brain holds on to an image for longer than it actually appears in real life. This is analogous to a camera with a long exposure, and is why you can see the continuous image of a banana on the rotating wheel below. </p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/LedBikeWheel/bananaBikeWheel.gif" style="max-height: 400px">
+						</div>
+						<hr />
+						<h3>Image Processing</h3>
+						<p>Firstly, we need to be able to load and process any image sent to the system. You can connect to the Raspberry Pi over WiFi and upload any image (.jpg, .png, .gif). The R-Pi receives the image, resizes it (for uniform resolution), converts it to polar coordinates (so we can easily access angle data), decides which color the 12 LEDs should be at every degree of rotation and saves that into a text file. Our prototype only supported 8 colors (Red, Green, Blue, Yellow, Cyan, Purple, White, Black) but that could have been expanded in the future.</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/LedBikeWheel/ImageProcessingFlowChart_Output.jpg" style="max-height: 400px">
+						</div>
+						<hr />
+						<h3>Position Tracking and LED Update</h3>
+						<p>During runtime the R-Pi tracks where the LED sticks are by using the magnet attached to the bike and the hall effect sensors on the tip of each LED stick. When each stick passes the magnet it knows the exact position of each stick (all 90° apart from each other) and can calculate the RPM of the bike wheel. Using the RPM it can figure out how long to wait between updating the LEDs each 1° of rotation. When the time is right it grabs the color for each LED and sends it over SPI to the I/O chips which control the lights.</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/LedBikeWheel/LedControlFlowChart.JPG" style="max-height: 400px">
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<a class="anchor" id="About"></a>
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<h3>About Me</h3>
+						<p>I am a young Electrical Engineering from Arizona who is passionate about new levels of interconnection through technology.
+						Starting my career with Ford was an eye-opening experience; learning about the automotive industry, vehicle automation and electrification. It showed me there are a lot of new engineering challenges in the automotive space right now and plenty of opportunities to be involved in meaningful work, not just for the company, but for something bigger. </p>
+					</section>
+					<section>
+						<h3>Education</h3>
+						<ul class="alt">
+							<li><a href="https://engineering.asu.edu/" target="_blank">Arizona State University (BSEE)</a></li>
+							<li><a href="https://barretthonors.asu.edu/about" target="_blank">Barrett, the Honors College.</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Links</h3>
+						<ul class="plain">
+							<li><a href="https://www.linkedin.com/in/ian-saltwick-23591b81/" target="_blank"><i class="icon fa-linkedin">&nbsp;</i>Linkedin</a></li>
+							<li><a href="https://github.com/iSalty" target="_blank"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							<li><a href="https://www.facebook.com/ian.saltwick/photos" target="_blank"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="copyright">
+					&copy; iSaltwick | Design: <a href="https://templated.co">TEMPLATED</a>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

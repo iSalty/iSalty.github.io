@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<!--
+	Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>iSaltwick Desk Backlight</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">iSalty.github.io</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#ProjectHub">Projects</a>
+					<li><a href="index.html#About">About</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<!-- <h1>Project</h1> -->
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<h2>Desk Backlight</h2>
+						</header>
+						<p>The Desk Backlight project is powered by a Raspberry Pi and a 1 meter long LED strip. Shortly after moving to Michigan for my new job at Ford I wanted to spruce up my apartment and decided that some backlights for the desk would do the trick. They can do static colors or enter a mode which is able to mimic the colors present on the monitor screens. Below is a diagram of the project components and wiring.</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/deskBacklight/DotStar-Desk-Backlight.png" style="max-height: 400px">
+						</div>
+						<p></p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/deskBacklight/staticPurple.JPG" style="max-height: 300px">
+						</div>
+						<hr />
+						<h3>Button Debounce</h3>
+						<p>I included a momentary push button for the user to change modes and turn ON/OFF all of the LEDs. Initially I ran into issues where a single button press would register as mulitple because of button bounce. I wrote extra software logic to reject button presses that occur within 0.2s of the previous to improve performance. </p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/deskBacklight/buttonPress.gif" style="max-height: 400px">
+						</div>
+						<hr />
+						<h3>Client & Server Programs</h3>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/deskBacklight/SoftwareFlowChart_DeskBacklight.JPG" style="max-height: 400px">
+						</div>
+						<p></p>
+						<p>In order to get the data from my desktop computer to my Raspberry Pi I need a program running on each device. The <a href="https://github.com/iSalty/RPiDeskLight/blob/master/screenGrab.py" target="blank">server side program</a> (on my PC) screenshots the monitors twice per second, downsamples the data, and uploads the color data to a website. The <a href="https://github.com/iSalty/RPiDeskLight/blob/master/desk-backlight-button-v1.py" target="blank">client side program</a> (on the R-Pi) retrieves the data from the website and upates the LEDs accordingly using a serial communication interface to the Dotstar LED strip. Above is a flowchart showing the logic.</p>
+						<div style="max-height: 400px">
+							<video class="video center" autoplay loop muted playsinline src="images/deskBacklight/DemoDeskBacklight.mp4"></video>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<a class="anchor" id="About"></a>
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<h3>About Me</h3>
+						<p>I am a young Electrical Engineering from Arizona who is passionate about new levels of interconnection through technology.
+						Starting my career with Ford was an eye-opening experience; learning about the automotive industry, vehicle automation and electrification. It showed me there are a lot of new engineering challenges in the automotive space right now and plenty of opportunities to be involved in meaningful work, not just for the company, but for something bigger. </p>
+					</section>
+					<section>
+						<h3>Education</h3>
+						<ul class="alt">
+							<li><a href="https://engineering.asu.edu/" target="_blank">Arizona State University (BSEE)</a></li>
+							<li><a href="https://barretthonors.asu.edu/about" target="_blank">Barrett, the Honors College.</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Links</h3>
+						<ul class="plain">
+							<li><a href="https://www.linkedin.com/in/ian-saltwick-23591b81/" target="_blank"><i class="icon fa-linkedin">&nbsp;</i>Linkedin</a></li>
+							<li><a href="https://github.com/iSalty" target="_blank"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							<li><a href="https://www.facebook.com/ian.saltwick/photos" target="_blank"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="copyright">
+					&copy; iSaltwick | Design: <a href="https://templated.co">TEMPLATED</a>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
