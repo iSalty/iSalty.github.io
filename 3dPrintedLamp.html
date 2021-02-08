@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+	Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>iSaltwick 3D Printed Lamp</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">iSalty.github.io</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#ProjectHub">Projects</a>
+					<li><a href="index.html#About">About</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<!-- <h1>Project</h1> -->
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<h2>3D Printed LED Lamp</h2>
+						</header>
+						<p>I wanted to expand the list of microcontrollers that I had experience with and I saw that the ESP8266 was more capable than an Arduino, had WiFi connectivity, 
+							and came at a cheaper price. I had also recently purchased a 3D printer and wanted to try my hand designing models in CAD and printing them to quickly itterate 
+							on an idea. Putting these two things together, I came up with a geometric lamp design and soon enough I had a working prototype in my hands.
+						</p>
+						<ul>
+							<li>ESP8266 Microcontroller</li>
+							<li>Neopixel 12 LED Ring</li>
+							<li>Momentary Push Button</li>
+						</ul>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/3dPrintedLamp/ComponentsBase.jpg" style="max-height: 400px">
+						</div>
+						<hr />
+						<h3>CAD Model Design</h3>
+						<p>This was my first time using CAD programs to do any projects and it was a big learning experience for me. I started with <a href="https://www.tinkercad.com/" target="blank">TinkerCAD</a>, 
+							which was the simplest to get working with, but this project required a bit more precision so I moved to <a href="https://www.autodesk.com/products/fusion-360/personal" target="blank">Fusion360</a> which can be used 
+							for free for personal projects. Here the CAD diagram is shown, the pentagonal base is made up of 3 pieces, and the lamp shade is a single piece.
+						</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/3dPrintedLamp/CAD_BaseModel.gif" style="max-height: 400px">
+						</div>
+						<hr />
+						<h3>3D Printer</h3>
+						<p>I had heard about 3D printers in my schooling at Arizona State University but I had never really had any hands on time with them so I decided to purchase one for myself.
+							I learned a lot about the machine during this project, previously, I hadn't realized just how precise it could be and the level of calibration that needs to be done for 
+							it to work properly.
+						</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/3dPrintedLamp/PrintedParts.jpg" style="max-height: 400px">
+						</div>
+						<hr />
+						<h3>Software</h3>
+						<p>The ESP8266 is at the heart of the design running C code which controls the LEDs and monitoring the button which allows the user to change colors. Currently, the lamp just
+							does some static colors, but in the future I intend on linking the lamp to the internet so that its color can change in relation to some information on the web (I am thinking
+							weather). The user presses down on the top of the lamp (which depresses the button at the bottom) thus triggering a state change in the software.
+						</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/3dPrintedLamp/LitUpLamp.jpg" style="max-height: 400px">
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<a class="anchor" id="About"></a>
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<h3>About Me</h3>
+						<p>I am a young Electrical Engineering from Arizona who is passionate about new levels of interconnection through technology.
+						Starting my career with Ford was an eye-opening experience; learning about the automotive industry, vehicle automation and electrification. It showed me there are a lot of new engineering challenges in the automotive space right now and plenty of opportunities to be involved in meaningful work, not just for the company, but for something bigger. </p>
+					</section>
+					<section>
+						<h3>Education</h3>
+						<ul class="alt">
+							<li><a href="https://engineering.asu.edu/" target="_blank">Arizona State University (BSEE)</a></li>
+							<li><a href="https://barretthonors.asu.edu/about" target="_blank">Barrett, the Honors College.</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Links</h3>
+						<ul class="plain">
+							<li><a href="https://www.linkedin.com/in/ian-saltwick-23591b81/" target="_blank"><i class="icon fa-linkedin">&nbsp;</i>Linkedin</a></li>
+							<li><a href="https://github.com/iSalty" target="_blank"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							<li><a href="https://www.facebook.com/ian.saltwick/photos" target="_blank"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="copyright">
+					&copy; iSaltwick | Design: <a href="https://templated.co">TEMPLATED</a>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

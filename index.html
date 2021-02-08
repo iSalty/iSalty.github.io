@@ -1,548 +1,159 @@
 <!DOCTYPE HTML>
 <!--
-	Ion by TEMPLATED
+	Industrious by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
 	<head>
-		<title>iSaltwick Blog</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>iSaltwick Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
+		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body id="top">
+	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header" class="skel-layers-fixed">
-				<h1><a href="#">Ian</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#AboutMe">About</a></li>
-						<li><a href="#ProjectSnippets">Projects</a></li>
-						<li><a href="#RPiDeskBacklightPost" class="button special">Latest Post</a></li>
-					</ul>
+			<header id="header">
+				<a class="logo" href="index.html">iSalty.github.io</a>
+				<nav>
+					<a href="#menu">Menu</a>
 				</nav>
 			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#ProjectHub">Projects</a></li>
+					<li><a href="index.html#About">About</a></li>
+				</ul>
+			</nav>
 
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<h2>Ian's EE Blog</h2>
-					<p>Keeping up to date with my zany projects</a></p>
-					<ul class="actions">
-						<li><a href="#RPiDeskBacklightPost" class="button big special">Most Recent</a></li>
-						<li><a href="#AboutMe" class="button big alt">Learn More</a></li>
-					</ul>
+					<h1>Ian Saltwick</h1>
+					<p>Electrical Engineer with 4 years experience testing software and developing test solutions for Advanced Driver Assist features at Ford Motor Company. Also a talented tinkerer and creator in my personal time.</p>
 				</div>
+				<video autoplay loop muted playsinline src="images/iSalty_Banner.mp4" style="max-width: 100%;"></video>
 			</section>
 
-		<!-- One -->
-			<section id="one" class="wrapper style1">
-				<header class="major">
-					<a class="anchor" id="AboutMe"></a>
-					<h2>About Me</h2>
-					<p></p>
-				</header>
-				<div class="container">
-					<div class="row">
-						<div class="4u">
-							<section class="special box">
-								<i class="icon fa-graduation-cap major"></i>
-								<h3>School</h3>
-								<p>I recently graduated from Arizona State University with a Bachelors of Science in Electrical Engineering. I plan on eventually returning to school for a masters degree in EE.</p>
-							</section>
-						</div>
-						<div class="4u">
-							<section class="special box">
-								<i class="icon fa-cog major"></i>
-								<h3>Projects</h3>
-								<p>I was involved in a few noteworthy projects in college and love tinkering and inventing in my own time. Here I will go through the design process of some of these projects.</p>
-							</section>
-						</div>
-						<div class="4u">
-							<section class="special box">
-								<i class="icon fa-area-chart major"></i>
-								<h3>Career</h3>
-								<p>Out of college I got a job with Ford Motor Company in the Hardware in Loop (HiL) lab. We test vehicle features by monitoring/simulating the electric signals involved in them.</p>
-							</section>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-		<!-- Two -->
-			<section id="two" class="wrapper style2">
-				<header class="major">
-					<a class="anchor" id="ProjectSnippets"></a>
-					<h2>Project Snippets</h2>
-					<p>Quick overviews of my Engineering projects</p>
-				</header>
-				<div class="container">
-					<div class="row">
-						<div class="6u">
-							<section class="special">
-								<a class="image fit"><img src="images/LEDbikeWheel/LEDbikePrototype.jpg" alt=""/></a>
-								<h3>LED Bike Wheel</h3>
-								<p>This project applies the persistence of vision concept to a lesser explored medium; the wheel of a moving bicycle. The motion of the wheel, along with intelligent control of discrete LEDs, create vibrant illusions of solid lines and crescents. These shapes make up the image as the bike wheel quickly spins. The rotation of the bike wheel can be compensated for in order to produce a standing image (or animation) of the user’s choosing.</p>
-								<ul class="actions">
-									<li><a href="#LEDbikeWheelPost" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
-						</div>
-						<div class="6u">
-							<section class="special">
-								<a class="image fit"><img src="images/RPiDeskLight/screen-follow.JPG" alt="" /></a>
-								<h3>RPi Desk Backlight</h3>
-								<p>The RPi Desk Backlight consists of a meter long strip of 30 LEDs attached to the back of my desk. This LED strip is controlled by a Raspberry Pi Model 3. For user input a tactile button is incorporated so you can easily change what is being displayed. One button press changes the background to a solid color [Green, Yellow, Red, Purple, Blue, Cyan]. A Button Double-press will make the LEDs follow the colors present on the monitor screens (shown in the picture).</p>
-								<ul class="actions">
-									<li><a href="#RPiDeskBacklightPost" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
-						</div>
+		<!-- Project Hub -->
+			<a class="anchor" id="ProjectHub"></a>
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>Project Hub</h2>
+						<p>A portfolio of the engineering projects I have brought to life though work, academics, or personal projects.</p>
+					</header>
+					<div class="highlights">
+						<section>
+							<div class="content">
+								<a href="LedBikeWheel.html"><img class="project-image" src="images/Prototype_Front_lit.jpg"></a>
+								<header>
+									<a href="LedBikeWheel.html"><h3>LED Bike Wheel</h3></a>
+									<p>LEDs on rotating bike wheel create image through Persistence of Vision.</p>
+								</header>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<a href="eInkCalendar.html"><img class="project-image" src="images/ePaper_Calendar.jpg"></a>
+								<header>
+									<a href="eInkCalendar.html"><h3>e-Ink Calendar</h3></a>
+								</header>
+								<p>Low power battery operated e-Ink display linked to Google calendar.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<a href="deskBacklight.html"><img class="project-image" src="images/screen-follow.JPG"></a>
+								<header>
+									<a href="deskBacklight.html"><h3>Desk Backlights</h3></a>
+								</header>
+								<p>LED strip that mimics the colors on the desktop monitors in real time.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<a href="stopSignDetector.html"><img class="project-image" src="images/stop-sign-detect.jpg"></a>
+								<header>
+									<a href="stopSignDetector.html"><h3>Stop Sign Detector</h3></a>
+								</header>
+								<p>Computer Vision program using OpenCv to detect Stop Signs in a given image.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<a href="3dPrintedLamp.html"><img class="project-image" src="images/3D-lamp.jpg"></a>
+								<header>
+									<a href="3dPrintedLamp.html"><h3>3D Printed Lamp</h3></a>
+								</header>
+								<p>Designed and 3D printed my own lamp. ESP8266 controller and Neopixel LEDs.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<a href="conditioningOpAmp.html"><img class="project-image" src="images/OpAmp.jpg"></a>
+								<header>
+									<a href="conditioningOpAmp.html"><h3>Conditioning OP Amp</h3></a>
+								</header>
+								<p>Two stage Op Amp circuit to buffer, condition, and amplify a PWM signal.</p>
+							</div>
+						</section>
 					</div>
 				</div>
 			</section>
 
-		<!-- Three -->
-			<section id="three" class="wrapper style1">
-				<div class="container">
-					
-					<!-- LED Bike Wheel Post -->
-					<div class="row">
-						<a class="anchor" id="LEDbikeWheelPost"></a>
-						<div class="8u">
-							<section>
-								<h2>LED Bike Wheel</h2>
-								<a class="image fit"><img src="images/LEDbikeWheel/boardAssembleLit.jpg" alt=""/></a>
-								<p>Living in Tempe (one of the most bikeable cities in the US) we encountered many bikes in our daily lives. It was how my teamates and I commuted to campus and back everyday of the week. Bikes, being so central to our environment, were at the forefront of our thoughts when it came time to pick a project topic in the Fall of 2015. We had all seen people attempt to put lights on their bikes, but most were just sad strands of LEDs that went about, producing nothing but a wiggly circle. We wanted take that idea and kick it up a notch. We envisioned making a bike wheel able to produce a vibrant picture of the user's choosing and display it as the bike traveled foward.</p>
-								
-								<center>
-									<ul class="actions">
-										<li><a class="button alt" onclick="ShowPostBody('LEDbikePostBody')">Learn More</a></li>
-									</ul>
-								</center>
-							</section>
-						</div>
-						<div class="4u">
-							<section>
-								<h3>Senior Design Project</h3>
-								<p>The LED Bike wheel was my senior design project (capstone) from my undergrad studies at Arizona State University. My team and I came up with the idea and later found out that other products like it already exist. Even still, our design offered some novel benefits, such as, on board image processing and WiFi connectivity.</p>
-							</section>
-							<hr />
-							<section>
-								<h3>Related Projects</h3>
-								<ul>
-									<li><a href="https://www.youtube.com/watch?v=_FlV6pgwlrk" target="_blank">SmarterEveryDay: Persistence Of Vision</a></li>
-									<li><a href="http://www.monkeylectric.com/monkey_light_pro/" target="_blank">Monkeylectric Monkey Light PRO</a></li>
-									<li><a href="https://revolights.com/" target="_blank">RevoLights</a></li>
-								</ul>
-							</section>
-						</div>
-					</div>
-					
-					<!-- POST BODY -->
-					<div id ="LEDbikePostBody">
-						<div class="row">
-							<!--1: Persistence Of Vision-->
-							<div class="4u">
-								<h3>1: Persistence Of Vision </h3>
-								<a class="image fit"><img src="images/LEDbikeWheel/paint of square to polar.png" alt="" style="margin-top: 40px"/></a>
-							</div>
-							<div class="8u">
-								<p>
-									Thus, the idea was born that there could be static images displayed on the bike wheel as the bike was in motion using the physical phenomenon of <a href="http://www.foundationsmag.com/persistence_of_vision.html" target="_blank">Persistence of Vision</a>. Persistence of Vision is the explanation of how the human eye to retains a discrete image of light for fractions of a second after it has gone. “Whenever light strikes the retina, the brain retains the impression of that light for about a tenth of a second…after the source of the light is removed. As a result, the eye cannot clearly distinguish fast changes in light that occur faster than this retention period”. This phenomenon has inspired the creation of many technologies. It is at the core of how motion is perceived by us in movies or on television screens. The LED Bike Wheel would be able to utilize the sluggishness of the human eye and mind to not only create animation (using multiple frames in succession) but also to create the screen itself. In the assembly there would exists only a few pixels, but when spinning around at a fast enough rate, each pixel is perceived by the mind as a solid circle. The color of any point on those circles can be controlled to produce the desired image. An illustration of POV as it relates to our bike display is shown below.
-								</p>
-							</div>
-							<div class="12u">
-								<p>
-									Each blue circle represents what our minds would see from a single lit LED, rotating rapidly about the center. It is clear to see where in the rotation each LED would need to turn red in order to create the image of the red square, and it is the goal of this project to design a system to do something similar.
-								</p>
-							</div>
-						</div>
-
-						<!--2: Final Prototype-->
-						<div class="row">
-							<div class="4u">
-								<h3>2: Final Prototype </h3>
-								<a class="image fit"><img src="images/LEDbikeWheel/bananaBikeWheel.gif" alt=""/></a>
-							</div>
-							<div class="8u">
-								<p style="margin-top:40px">
-									Here I thought I would show what the final prototype actually looked like because if it wasn't clear how Persistence of Vision played a role, it should certainly be clear now.
-								</p> 
-								<p> 
-									The LED Bike Wheel is attempting to replicate an image of a banana in this video and you can see that the LEDs are only turning on at very specific locations during the rotation in order to create the banana. Multiple images could be played one after the other in order to produce an animation. To demonstrate this on the bike wheel we had 2 pac-man images one with mouth open and the next with mouth closed. Therefore, when you were riding the bike it would appear that pac-man was openning and closing his mouth.
-								</p>
-								<p>
-									Because we only had 12 LEDs on each board it limited the ability to produce complex images and shapes. Effectivley, it would be the same as having a really low resolution screen; thus, most of the images that we put on the bike wheel were quite simple. 
-								</p>
-								<p>
-									Nevertheless, in subsequent posts I will describe (in detail) the design process of making this project and my thought process in solving the vaious challenges we faced.
-								</p>
-							</div>
-						</div>
-
-						<!--3: First Program-->
-						<div class="row">
-							<div class="8u">
-								<h3>3: First Program </h3>
-								<p>Where else to start, but at the beginning. Now that we had decided what the product was supposed to be and do, it was time to get to work on actually prototyping it. First up was learning how to work with the Raspberry Pi. The RPi has great built in functionality with Python programs and its General Purpose Input/Output (GPIO) which I used to interface with LEDs. I was able to quickly whip up <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/colorFunc.py" target="_blank">this program</a>. The program changes the colors of two LEDs simply by controlling specific GPIO pins to be on or off. Using these <a href="https://www.adafruit.com/products/302?gclid=Cj0KEQjw6O-9BRDjhYXH2bOb8Z4BEiQAWRdukxl-JQYDdKpD95jpF_yId-9EI2LiMlpYy1B5FyyQqVoaAvEP8P8HAQ" target="_blank">common anode RGB LEDs</a> I purchased from Adafruit and some resistors I had lying around I was able to create the LED display seen here. </p>
-							</div>
-							<div class="4u">
-								<h4>RGB LEDs controlled over GPIO</h4>
-								<iframe width="auto" height="260px" src="https://www.youtube.com/embed/B8FuRu6dYN0" frameborder="0" allowfullscreen></iframe>
-							</div>
-						</div>
-
-						<!--4: GPIO Expansion-->
-						<div class="row">
-							<div class="12u">
-								<h3>4: GPIO Expansion</h3>
-								<p>I had shown that the LEDs could be controlled simply through the Raspberry Pi's GPIO pins. However, we wanted a lot of LEDs on our bike wheel (48 to be exact) and there simply were not enough GPIO pins on the RPi to accomodate that number of LEDs.After some research we elected to go with adding GPIO expander chips from Microchip (the MCP23S17) which would add 16 GPIO ports per chip. We used to following scheme to connect the LEDs to the GPIO expanders (4 LEDs per chip).</p>
-								<a class="image fit" style="width:60%; margin: 0 auto;"><img src="images/LEDbikeWheel/rgbLED_MCP.PNG" alt=""/></a>
-								<p>Because the LEDs used are common anode, 5v is put into the common anode and the current flows through wherever there is a voltage differential. Consequently, the LED runs backwards, in a sense. For example, if Red was the desired color of the LED, the pins would have to be controlled in the following way, [B:1, G:1, R:0, Pow:1]. This way there is only a voltage differential between the voltage input (anode) and the desired return path (red). Below is a table of the different colors and their assosciated control scheme, along with a hex value to represent that color (K=Black, W=White, R=Red, G=Green, B=Blue, Y=Yellow, P=Purple, C=Cyan).</p>
-								<a class="image fit" style="width:60%; margin: 0 auto; margin-bottom: 30px"><img src="images/LEDbikeWheel/4.2.2.2.PNG" alt=""/></a>
-							</div>
-						</div>
-
-						<!--5: Breadboard Layout-->
-						<div class="row">
-							<div class="12u">
-								<h3>5: Breadboard Layout</h3>
-								<p>Once I was able to figure out how to work with 4 LEDs connected to one of the MCP23S17 chips it became apparent how we were going to be able to scale up to deal with 48 LEDs. Initially we wanted to design the device to be on Printed Circuit Boards. However, when looking into the monetary cost and, even more importantly, the time cost to have them made and shipped to us, we realized that going down this route would leave us with little wiggle room if something were to go wrong. Therefore, we elected to design the product on solderable breadboards, specialized for prototyping. The solderable breadboards would give us the most flexibility if we made a mistake and were also significantly cheaper than doing the layout on a printed circuit board. The solderable breadboard layout I came up with can be seen below.</p>
-								<a class="image fit" style="width:65%; margin: 0 auto;"><img src="images/LEDbikeWheel/SolderableBreadboardLayout.PNG" alt=""/></a>
-								<p>As you can see in the diagram above, there would be four boards making up the LED Bike Wheel assembly. Each board contains 12 LEDs and the chips needed to control them as well as the appropriate resistors (all 1kΩ). At the top of each board is a Hall effect sensor which is responsible for keeping track of the rate of rotation of the wheel and will be talked about more in a later post.</p>
-							</div>
-						</div>
-
-						<!--6: First Board-->
-						<div class="row">
-							<div class="8u">
-								<h3>6: First Board</h3>
-								<a class="image fit"><img src="images/LEDbikeWheel/StickAssembly_Front.png" alt=""/></a>
-								<a class="image fit"><img src="images/LEDbikeWheel/StickAssembly_Back.png" alt=""/></a>
-							</div>
-							<div class="4u" style="margin-top:30px">
-								<p> We got to work assembling the boards seen in the above diagrams. Because we elected to create our assembly on solderable breadboards we had a considerable amount of soldering ahead of us.</p>
-								<p> None of us had extensive experience soldering before, but by the end of it we were all experts. Each board took around 2-3 hours of soldering to complete and plenty of errors had to be corrected. Our first complete board can be seen in the images here (top = front) (bottom = back).</p>
-							</div>
-							<div class="12u">
-								<p>Now that the actual hardware portion of the build was complete it was time to focus on the software. The software would handle how to coordinate all 48 LEDs in order to generate a standing image on the bike wheel. But first things first, we just wanted to see if our hack job of a hardware prototype could light up. I had written <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/rainbow.py" target="_blank">some code here</a> in which I could specify the colors of 12 LEDs and it was finally time to test it out. Unsurprisingly, on the first try, nothing happened. After checking the wiring with a digital multimeter, swapping out a few resistors, and resoldering some wires we were able to get it working. It makes the rainbow effect seen in the post at the top of the LED Bike Wheel section.</p>
-							</div>
-						</div>
-
-						<!--7: Image Processing-->
-						<div class="row">
-							<div class="12u">
-								<h3>7: Image Processing</h3>
-								<p>In software there are two programs which are central to the design; polarRead and LEDcontrol. Both programs are written in python and operate on the Raspberry Pi which is located on the bike wheel. PolarRead does the image processing before the image can be displayed, and LEDcontrol outputs the proper image to the LEDs on the Bike Wheel. We will look at polarRead.py in more detail here.</p>
-								<p><a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/polarRead.py" target="_blank">PolarRead.py</a> is the program responsible for reading in any image, determining what colors the LEDs should be at each point of the display and saving the data to be used in the other program, LEDcontrol. An image editing library, OpenCV, was utilized in this program because it contains functions already written which are relevant and usable in our design. This image library allows the software to do the appropriate image processing on any type of image (.jpg, .gif, .png, etc). First, the image is read in, then it is resized to 360px by 360px so that a constant resolution is achieved for the bike wheel display. This resolution contains data for 360 degrees of rotation which is necessary to have an image detailed enough to display well on the bike wheel.</p>
-								<p>Next the image has to be converted from Cartesian (x, y) coordinates to polar coordinates (r, θ). Polar coordinates contain data on the radius(r) and angle(θ) of each pixel and, therefore, provide a simpler way to track where the LED boards are and what color they should be as they rotate with the wheel. The function to go from Cartesian coordinates to polar has already been written in the openCV library and is used in this program to do the transformation. However, it is still necessary to understand how this function works in order to properly extract the desired data from its output. A demonstration of its operation is shown in the figure below. Cartesian image (left) to Polar image (right).</p>
-								<a class="image fit" style="width:60%; margin: 0 auto; margin-bottom:20px"><img src="images/LEDbikeWheel/polarRead_prntScrn1.jpg" alt=""/></a>
-								<p>The black line shown in the Cartesian image indicates the line where the transformation begins. It takes this line of colors and prints it at the top of the polar image assigning it θ = 0°. The transformation then proceeds, swinging the black line around clockwise and printing down on the polar image, every degree rotation clockwise on the cartesian image corresponds to one new row on the polar image. The left side of the polar image represents colors closer to the center of the cartesian image, and the right side of the polar image represents colors furthest away from the center. Because there are 12 LEDs on each board we need to get the color data for each LED for each degreen of rotation (12 LEDs x 360&#730; = 4,320 colors). I stored each color as a color character which was saved to a text file and would be read in by the following program LEDcontrol.py</p>
-								<a class="image fit" style="width:60%; margin: 0 auto; margin-bottom:30px"><img src="images/LEDbikeWheel/polarRead_prntScrn2.jpg" alt=""/></a>
-							</div>
-						</div>
-
-						<!--8: LEDcontrol.py-->
-						<div class="row">
-							<div class="12u">
-								<h3>8: LED_control.py</h3>
-								<p>Finally, we can take a look at the second program <a href="https://github.com/iSalty/LED-Bike-Wheel/blob/master/drive-download-20160823T233046Z/LEDcontrol.py" target="_blank">LEDcontrol.py</a> which is the program that actually runs while the bike wheel is in motion. It is responsible for keeping track of the speed of the bike as well as updating the LEDs with the correct colors every single degree of rotation (can be as fast as once every millisecond). Here I will delve a bit into how the program functions to accomplish this. </p>
-
-								<p>Initially, the text file (created from the polarRead program) is read in which contains the list of 4,320 color characters, multiple text files can be read; each representing a single frame of an image. Using multiple frames in quick succession allows the LED Bike Wheel to display animations. Now that the color characters are available, they need to be translated into something the computer can understand to properly output to the LEDs, therefore they are translated into bytes using the scheme seen back in post 4:</p>
-								
-								<a class="image fit" style="width:60%; margin: 0 auto; margin-bottom: 30px"><img src="images/LEDbikeWheel/4.2.2.2.PNG" alt=""/></a>
-								<a class="image fit" style="width:60%; margin: 0 auto; margin-bottom: 30px"><img src="images/LEDbikeWheel/realDeal_prntScrn.jpg" alt=""/></a>
-								
-								<p>You will notice how things in the hex list seem out of place, this is due to the way that the LEDs were wired to the MCP23S17 chips. This was done to keep track of which LEDs are located in the positions that the Most Significant Bits control. Therefore the hex list looks to the second color character then to the first, then to the fourth, then to the third, and so on. The hex list is then converted to decimal by adding the two adjacent hex values. Therefore, each decimal number represents the color for 2 LEDs.</p>
-							</div>
-						</div>
-
-						<!--9: Position Tracking (post 10 in old site)-->
-						<div class="row">
-							<div class="4u">
-								<h3>9: Position Tracking</h3>
-								<a class="image fit"><img src="images/LEDbikeWheel/RearWheelCoordinates.jpg" alt=""/></a>
-							</div>
-							<div class="8u">
-								<p>Now all we had left to do is figure out how to keep track of where the LED boards are in their rotation about the wheel and how fast they are moving (RPM) to feed that information to some function which retrieves the proper colors and writes them to the LEDs.</p>
-								<p>The hall effect sensor (at the top of each LED board) outputs a signal whenever it is in the presence of a magnetic field. That magnetic field will be coming from a magnet attached to the frame of the bike, external to the moving wheel (notified by the blue circle to the left).</p>
-								<p>The hall sensor is fed with 5V and is pulled up with a 1kOhm resistor. Therefore, it outputs 5V when there is no magnetic field and drops down to 0V when there is a magnetic field present. Vout feeds back to the Raspberry Pi where it is constantly reading the input of the hall sensor. As soon as the hall sensor passes the magnet on the bike frame it drops to 0V and the Raspberry Pi knows it just passed the magnet i.e., where it is in its rotation.</p>
-							</div>
-							<div class="12u">
-								<p>Using this information to ascertain the RPM of the wheel is fairly simple. Take a time reading when it passes the magnet, take another time reading when the next one passes the magnet. Take the difference between the two times and you have the time it took for the wheel to rotate 90 degrees (because each LED board is 90 degrees apart). Multiply that number by 4 to get how many seconds it takes to do 1 full rotation (this is Seconds Per Rotation). Invert seconds per rotation to get rotations per second, then multiply by 60 to get rotations per minute (RPM). The library which allows the RPi to get readings of the time in seconds is aptly named, <a href="https://docs.python.org/2/library/time.html" target="_blank">Time</a> and is used throughout the program for this purpose.</p> 
-								<p>However, using the method stated above for calculating RPM, readings only occur every 90 degrees of rotation. Therefore the RPi only really knows for sure where the LED boards are at these exact moments of reading, it has to guess where they are inbetween readings using the calculated RPM value. These guesses attempt to figure out when the wheel has rotated one degree by assuming that the RPM stays constant between readings. Thus, to update the LEDs once per every degree of rotation it waits however long that would take for the calculated RPM, then writes to the LEDs, then waits again, and so on.</p>
-							</div>
-						</div>
-
-						<!--10: Coming Together-->
-						<div class="row">
-							<div class="12u">
-								<h3>10: Coming Together</h3>
-								<p>After the position of the LED boards are known from the Hall Sensor reading, it is easy to go to the Decimal List described in post 8 and select the colors specific to that location. The decimals are then written to the SPI bus which writes to the MCP23S17 GPIO expander chips, and in turn, controls the LEDs.</p>
-								<p>So that's it, the basics of the LED bike wheel design has been completed. After some final testing and more resoldering to fix some loose wires it was time to put the entire assembly on the bike wheel. I will show you again what the setup is so that we can see the design and the actual prototype side by side.</p>
-								
-								<a class="image fit" style="width:60%; margin: 0 auto;"><img src="images/LEDbikeWheel/SolderableBreadboardLayout.PNG" alt=""/></a>
-								<div class="image fit" style="float:left; width:30%; margin-left:18%; margin-bottom:35px">
-									<img src="images/LEDbikeWheel/Prototype_Back.jpg" alt=""/>
-								</div>
-								<div class="image fit" style="float:right; width:34%; margin-right:16%">
-									<img src="images/LEDbikeWheel/Prototype_Front_lit.png" alt=""/>
-								</div>
-							</div>
-							<div class="12u">
-								<p>The battery we used was a simple power bank, meant to be used for charging phones and the like. It had a capacity of 4400mAh which would give us over 6 hours of operation on a single charge and worked perfectly for powering the whole assembly. It was finally time to give the wheel a spin and see what it could do.</p>
-								
-								<p> All in all, it was a fantastic project to be involved in from beginning to end and I personally think it was one of the coolest senior design projects of our class (but who wouldn't think their own project was the best). I will end the LED Bike Wheel project posts with my favorite picture of myself (in the purple) and my teammates at demo-day showing off our stellar project.</p>
-								
-								<a class="image fit" style="width:60%; margin: 0 auto; margin-bottom:30px"><img src="images/LEDbikeWheel/demo_day.jpg" alt=""/></a>
-								<center>
-									<ul class="actions">
-										<li><a class="button alt" onclick="ShowPostBody('LEDbikePostBody')">Show Less</a></li>
-									</ul>
-								</center>
-							</div>
-						</div>
-					</div>
-
-					<hr />
-
-					<!--RPi Desk Backlight Post-->
-					<div class="row">
-						<a class="anchor" id="RPiDeskBacklightPost"></a>
-						<div class="8u">
-							<section>
-								<h2>RPi Desk Backlight</h2>
-								<a class="image fit"><img src="images/RPiDeskLight/staticPurple.JPG" alt="" /></a>
-								<p>Clearly, I have a soft spot for LED projects and this was a cool little project that added a lot to the aesthetic of my computer desk. Different colors are easily chosen for any mood and the Screen Follow function is really cool to see in action. Initially, I thought I would have more intricate displays with more color changes and animation, but I found animations and rapid color changes made me dizzy while at the computer. Bright, simple colors were the remedy and still look really nice. Overall, the RPi Desk Backlight project turned out to be quite an interesting and quick build and I would recommend to anyone reading this to try creating their own.</p>
-								<center>
-									<ul class="actions">
-										<li><a class="button alt" onclick="ShowPostBody('RPiDeskBacklightPostBody')">Learn More</a></li>
-									</ul>
-								</center>
-							</section>
-						</div>
-						<div class="4u">
-							<section>
-								<h3>Weekend RPi Project</h3>
-								<p> Shortly after I got my job with Ford and moved to Michigan, I was looking for a way to spruce up my bland new apartment. I had heard about desk backlights before and thought it would be a neat thing to do (as well as reduce eye strain at night); so I set out to make my own. Two weekends later, it was built and fully functional.</p>
-							</section>
-							<hr />
-							<section>
-								<h3>Related Products</h3>
-								<ul>
-									<li><a href="https://www.kickstarter.com/projects/237916976/dreamscreen-hd-and-4k-led-backlighting-for-any-hdm/description" target="_blank">DreamScreen - TV Backlighting</a></li>
-									<li><a href="https://www.amazon.com/dp/B01LLFBYIO/ref=asc_df_B01LLFBYIO5020101/?tag=hyprod-20&creative=395033&creativeASIN=B01LLFBYIO&linkCode=df0&hvadid=167156299330&hvpos=1o3&hvnetw=g&hvrand=12698979537116093926&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9016866&hvtargid=pla-302467452841" target="_blank">Lahoku - TV Backlight</a></li>
-								</ul>
-							</section>
-						</div>
-					</div>
-					
-
-					<!-- POST BODY -->
-					<div id ="RPiDeskBacklightPostBody">
-						
-						<!--1: System Defintion & Layout-->
-						<div class="row">
-							<div class="12u"><h3>1: System Defintion & Layout</h3></div>
-							<div class="3u">
-								<p style="margin-bottom:4px">-System Components-</p>
-								<ul>
-									<li><a href="https://www.amazon.com/Raspberry-Model-A1-2GHz-64-bit-quad-core/dp/B01CD5VC92/ref=sr_1_3?ie=UTF8&qid=1497662851&sr=8-3&keywords=raspberry+pi+3+model+b" target="_blank">Raspberry Pi 3: Model B+</a></li>
-									<li><a href="https://www.adafruit.com/product/2238" target="_blank">DotStar LED strip (30 LED/m)</a></li>
-									<li><a href="https://www.amazon.com/gp/product/B01N7RS0NG/ref=oh_aui_detailpage_o02_s01?ie=UTF8&psc=1" target="_blank">Power Supply: 5V, 2.5A</a></li>
-									<li><a href="https://www.amazon.com/Adafruit-Colorful-Tactile-Button-Assortment/dp/B00XW2KD82/ref=sr_1_1?s=electronics&ie=UTF8&qid=1497663074&sr=1-1&keywords=tactile+button" target="_blank">Tactile Button</a></li>
-									<li>Breadboard & Wires</li>
-									<li>Computer</li>
-								</ul>
-								<p style="margin-bottom:5px">-Inputs-</p>
-								<ul>
-									<li>Tactile Button</li>
-									<li>Monitor Colors</li>
-								</ul>
-
-								<p style="margin-bottom:5px">-Outuputs-</p>
-								<ul>
-									<li>DotStar LED 1m strip</li>
-								</ul>
-							</div>
-							<div class="9u">
-								<a class="image fit"><img src="images/RPiDeskLight/DotStar-Desk-Backlight.png" alt=""></a>
-							</div>
-						</div>
-
-						<!--2: High Level Description-->
-						<div class="row">
-							<div class="12u"><h3>2: High Level Description</h3></div>
-							<div class="6u">
-								<p style="margin-bottom:5px">Essentially, there are two modes of operation for the backlight. One, is cycling through some preset colors to display. Second, is Screen Follow which attempts to mimic the colors present on the computer.</p>
-								<p style="margin-bottom:0px">-Preset Colors-</p>
-								<p style="margin-bottom:5px">On Button Press change the colors of the LED strip. Cycle through an array of preset colors. This array can be manipulated in the program.</p>
-								<p style="margin-bottom:0px">-Screen Follow-</p>
-								<p style="margin-bottom:5px">Activated on Button Double Press. Fades all LEDs OFF, then ON again. Reads color of monitor screens and sets LEDs to try to match. On Button Press return to normal preset color functionality.</p>
-								<p style="margin-bottom:0px">-OFF-</p>
-								<p>When the Button is Pressed and Held for 3 seconds, turn the LEDs OFF in a Fade manor from left to right (facing the desk).</p>
-							</div>
-							<div class="6u">
-								<iframe width="100%" height="350" src="https://www.youtube.com/embed/xJdZbCn5X5Y" frameborder="0" allowfullscreen></iframe>
-							</div>
-
-							<!--3: DotStar LEDs-->
-							<div class="row">
-								<div class="12u"><h3>3: DotStar LEDs</h3></div>
-								<div class="4u">
-									<a class="image fit"><img src="images/RPiDeskLight/strandTest1.gif" alt=""></a>
-								</div>
-								<div class="8u">
-									<p>I found the DotStar LEDs on Adafruit when I was researching what LEDs I was going to use for this project. Previously I had heard a lot about the Neopixel LED strips. However, when I was looking into them I saw that the Neopixel lights required the data to be sent out at very specific timings. A Raspberry Pi (running Linux) is not a real time system and therefore is not able to act on the precise timings required by the Neopixel lights.</p>
-									<p>The DotStar LEDs do not require these very specific timing intervals and therefore work on a broader number of systems. Therefore, they were the perfect pick becuase I was using an RPi 3. Additionally, Adafruit had developed a code library <a href="https://github.com/adafruit/Adafruit_DotStar_Pi" target="_blank">(Adafruit_Dotstar_Pi)</a> so that programming the LEDs was extreemly easy to pick up.</p>
-									<p>The animation to the left shows the <a href="https://github.com/adafruit/Adafruit_DotStar_Pi/blob/master/strandtest.py" target="_blank">strandTest python program</a> that Adafruit wrote as the program to test if your LED strip was functioning as desired.</p>
-								</div>
-							</div>
-
-							<!--4: Talking to LEDs-->
-							<div class="row">	
-								<div class="12u"><h3>4: Talking to LEDs</h3></div>
-								<div class="8u">
-									<a class="image fit"><img src="images/RPiDeskLight/staticRed.JPG" alt=""></a>
-								</div>
-								<div class="4u">
-									<p>As stated earlier, the colors will cycle when a tactile button is pressed. As easy as this might sound, there were some issues I ran into, and some things I had to learn, in order to get this to work, here is <a href="">my program</a>.</p>
-									<p>First and foremost, we will look at how to simply tell the DotStar LED strip what colors to light up. To do this I looked to the <a href="https://github.com/adafruit/Adafruit_DotStar_Pi/blob/master/strandtest.py" target="_blank">strandTest python program</a> that Adafruit had created.</p>
-								</div>
-								<div class="12u">
-									<p>In their program they set the color of one LED (at position 'head') and then shut OFF the LED 10 positions behind it on the strip. During the loop the head position is incremented so the result is a moving line of 10 LEDs down the strip of one color (seen in the animation in last section). Note: the color being written to the LED is 3 bytes of data (each color is 2 hex values, or byte) this is the same way the color of your computer monitor pixels are stored (values of 0-255).</p>
-									
-									<p>In the strandTest program they mention that 0xFF0000 is the color red, however, on the LED strip I recieved it was actually green. The first 2 Hex numbers corresponded with the Green color, the middle two with Red, and the last two with Blue. This would cause a slight complication for the screen follow function because the monitors' data was RGB, whereas the DotStar LED strip was GRB. I therefore had to do a convert between the two using a bit shift function '<<' in python (lines 100-108 in <a href="https://github.com/iSalty/RPiDeskLight/blob/master/desk-backlight-button-v1.py" target="_blank">my program</a>).</p>
-
-									<p>Now that I knew what the color data looked like I could write to the LED strip using the same method as in the strandTest program. strip.setPixelColor(LED_position, color) would write to a single LED on the strip with whatever color was passed in and strip.show() would update the strip to show the new color. A wait time was used so that things would happen at a pace we (humans) could observe. These simple pieces are all you really need to direct the LEDs to do your bidding. I implemented the colors as an array (line 210, <a href="">my program</a>) which gave it the flexibility to handle any given number of preset colors.</p>
-								</div>
-							</div>
-
-							<!--5: Preset Colors, Button Press-->
-							<div class="row">
-								<div class="12u"><h3>5: Preset Colors, Button Press</h3></div>
-								<div class="8u">
-									<a class="image fit"><img src="images/RPiDeskLight/staticCPC.JPG" alt=""></a>
-								</div>
-								<div class="4u">
-									<p>Now that we have tested the waters with writing to the LEDs, we want the user to be able to easily manipulate the output. The easiest way to do this is have a tactile button, that when pressed cycles though some array of preset colors (defined in the program).</p>
-
-									<p>I did just that with my RPi Desk Backlight display, however, getting it to work isn't always as trivial as it sounds. Here we explore some of the issues I faced and see how they impacted the software design.</p>
-								</div>
-								<div class="12u">
-									<p>The first thing you have to do in order to read a button press is assign the pin that to an input on the RPi. This is done early in <a href="https://github.com/iSalty/RPiDeskLight/blob/master/desk-backlight-button-v1.py" target="_blank">the backlight program</a> around lines 30-31. The thing to note here is that when we are setting a pin as an input it is good to either have it pulled high or low by a pull up or down resistor. This ensures that you know what the voltage is at the input whenever you are not influencing the button. I wired my button to be Active Low, meaning that when the button is pressed it would provide a path to ground and therefore the input would drop to 0v. Therefore it made sense to set the input to have a pull up resistor so that when the button wasn't pressed it would be pulled up to 5v. (If you did not have a pull up resistor the input would be "floating" and could be any value between 0-5v and vary wildly, making it hard to know when the button was pressed).</p>
-
-									<p>Another thing that can complicate a button is called "bouncing". This occurs when the button is pressed or released, the voltage will have overshoot and undershoot and require some amount of time before it settles at a relatively stable value. If you are just monitoring the voltage at the input pin and saying (v_in > 2.5v = True, v_in < 2.5v = False) when you pressed the button it would drop to 0v then maybe bounce back up to 2.5v then back down to 0v again. Therefore, a single button press can look like multiple button presses to the RPi. This non-ideality can be dealt with by placing a capacitor across the button or by telling the software to not count things that look like another button press but happen too quickly to be a real button press. I implemented the latter which is called "software-debouncing" (Line 142). Basically the code says if you read an additional button press less than 0.2s after the inital one, don't count it.</p>
-
-									<p>Now to read the button press the <a href="https://github.com/iSalty/RPiDeskLight/blob/master/desk-backlight-button-v1.py" target="_blank">backlight program</a> constantly reads the voltage at the button input pin (through an infinite loop) and if it sees the voltage go LOW, it knows that the button was pressed. When this happens it calls a function that records how long the button was held for. If it was held for more than 3 seconds it turns OFF the LEDs and then waits for the next button press. If held for less than 3 seconds it returns to main() and writes the next color to the LED strip. It then loops back to the beginning to read the input again. Instead of reading the input in an infinite loop you, can also set up an interrupt trigger to execute some code when the button is pressed. I used this at certain points (lines 56 and 201) in my program but if you want to know more about that you will have to look elsewhere as I am not acquainted with the full capabilities of interrupts and threading.</p>
-								</div>
-							</div>
-
-							<!--6: Screen Follow, Server Program-->
-							<div class="row">
-								<div class="12u"><h3>6: Screen Follow, Server-side Program</h3></div>
-								<div class="8u"><a class="image fit"><img src="images/RPiDeskLight/screen-follow-small.JPG" alt="" /></a></div>
-								<div class="4u">
-									<p>Moving on to the Screen Follow section we need to have a program running on my desktop which gets a screengrab of my monitors and put it somewhere that the RPi can then access (<a href="">windows screenGrab.py</a>). It is a very simple and short program which was easy to implement. It did, however, take a little work to get this program to run automatically on windows startup and run in the background (with no command prompt).</p>
-								</div>
-								<div class="12u">
-									<p>The above picture shows the LEDs mimicking the monitor screens. Therefore, it is not a preset color written on the LED strip, it looks at the monitor screens figures out what color each LED should be and then updates the strip to show those colors. Of course to do this you need a picture of the screens at that time so that you can figure out what colors you are trying to replicate. To take a screenshot of both monitors I used a library called desktop magic.</p>
-
-									<p>Now that I have a screenshot of both monitors I utilize the Python Imaging Library (PIL) in order to take the screenshot and turn it into something I can use. I use PIL to resize to the image to 30px x 1px using antialiasing for the most representative downsampling. The reason for this size is because I have 1 row of 30 LEDs, thus, I would have 1 pixel correlate to 1 LED of the desk backligght display. Each pixel contains the color information in the form of RGB colors, each an 8 bit value (0-255).</p>
-
-									<p>Finally, we upload the pixel colors to a local website (RPi and Desktop have to be on the same network). To do this we use the webpy library. Essentially there are two functions a website needs to have, a GET function, and a POST function. The GET function executes some code when the website is pinged from another device (the RPi) and that is all I use in my code. The way the <a href="https://github.com/iSalty/RPiDeskLight/blob/master/screenGrab.py" target="_blank">windows screenGrab.py</a> program works is the following. When the website is pinged: take a screenshot of both monitors, resize the screenshot to 30px x 1px using antialiasing and write the pixel data to the website. So the local website contains the pixel color in the following format (132, 139, 150), (133, 140, 151), ... The RPi can then go to this website and read in this information and use it to write the corresponding colors to the LED strip.</p>
-								</div>
-							</div>
-							
-							<!--7: Screen Follow, Client-side Program-->
-							<div class="row">
-								<div class="12u"><h3>7: Screen Follow, Client-side Program</h3></div>
-								<div class="8u">
-									<a class="image fit"><img src="images/RPiDeskLight/staticPYP.JPG" alt=""></a>
-								</div>
-								<div class="4u">
-									<p>Previously we discussed how the program worked on the Desktop computer for the Screen Follow function. Now we can understand how the RPi (or client) gets the information from the local website and what it does with it to make the screen follow function work.</p>
-									<p>In this section I will be talking about the screen follow function (lines 60-130 in <a href="https://github.com/iSalty/RPiDeskLight/blob/master/desk-backlight-button-v1.py"target="_blank">desk-backlight.py</a>) so refer there to see the implementation.
-								</div>
-								<div class="12u">
-									<p>The first thing the screen follow function does is fade OFF the LEDs so that the user knows that they are changing modes from preset colors to the screen follow function. This is simply done by calling a function that lowers the duty cycle of the LEDs from the preset value (defined at the beginning of the program BRIGHTNESS) to 0. After that happens the program then attempts to contact the local website.</p>
-
-									<p>When trying to establish connection with the local website it is best to include a timeout so that it does not get stuck attempting to make contact if the website is not up. I set the timeout to be 4 seconds so after that if it has not established connection yet it will return to main() and resume the preset color function. After a connection has been established it can simply read in the information from the website as a string using basic file read functions. It puts the colors (RGB at this point) into an array "color_values". Remember in an earlier section I mentioned that the DotStar LED strip I have stores the color information in the GRB format so we need to convert from RGB to GRB. This is done using simple bit shift operations and the updated GRB array with the color values is called "color_values_shift".</p>
-
-									<p>All you have to do now is write the colors in "color_values_shift" to the LEDs using the same function talked about in section 4. I have been using the flowRight() function for this to update the LEDs from left to right but you could write a different function to update the LEDs in a different manor. After the LEDs have been updated I wait 0.7 seconds then ping the website again (causing the sever-side program to take another screenshot and upload the new pixel color data). This is just some arbitrary amount of time to wait because I don't want to overload my desktop with taking screenshots and downsampling but is still fast enough to update the LEDs quickly to changes on the screen. Finally, there is some code looking for a button press, if the button is pressed it will return to main() and go back to the preset color functionality.</p>
-								</div>
-							</div>
-
-							<!--8: Conclusion-->
-							<div class="row">
-								<div class="12u"><h3>8: Conclusion</h3></div>
-								<div class="12u" style="text-align:center;">
-									<p style="text-align:left;">That's it, all you need to know to make your own desk backlight setup. Overall I thought the hardest part of this project was getting all of the libraries installed and working properly, writing the code that was actually executing during runtime was easy because it only uses very basic coding principles. This was my first program that I wrote which interacted with a program on another device (here through a local network) so that was really cool to see. In the end I just like how customizable this setup is, if I want to add more preset colors or a different way for the LEDs to change colors I just add or manipulate a few lines of code on the RPi, do a reboot and I'm good to go.</p>
-									<p style="text-align:left;">Below I show a quick demonstration of the desk backlight going through all of the preset colors I have as well as showing the basic functionality of the screen following ability. I am really happy with how the project turned out and it only took me a couple weekends to put together and have up and running. I am sure more will be added in the future to this project so stay tuned.</p>
-									<iframe width="80%" height="450px" style="display:inline-block;" src="https://www.youtube.com/embed/xJdZbCn5X5Y" frameborder="0" allowfullscreen></iframe>
-									<center>
-										<ul class="actions">
-											<li style="margin-top:25px"><a class="button alt" href="#RPiDeskBacklightPost" onclick="ShowPostBody('RPiDeskBacklightPostBody')">Show Less</a></li>
-										</ul>
-									</center>
-								</div>
-							</div>
-						</div>
-					</div>
-
+		<!-- CTA -->
+			<section id="cta" class="wrapper">
+				<div class="inner">
+					<h2>"It has been my observation that most people get ahead during the time that others waste." - Henry Ford</h2>
+					<!-- <p>"It has been my observation that most people get ahead during the time that others waste." - Henry Ford</p> -->
 				</div>
-			</section>			
-			
+			</section>
+
 		<!-- Footer -->
+			<a class="anchor" id="About"></a>
 			<footer id="footer">
-				<div class="container">
-						<div class="12u">
-							<ul class="icons">
-								<li><a href="https://github.com/iSalty" target="_blank" class="icon fa-github fa-3x"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.facebook.com/ian.saltwick" target="_blank" class="icon fa-facebook fa-3x"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.linkedin.com/in/ian-saltwick-23591b81" target="_blank" class="icon fa-linkedin fa-3x"><span class="label">LinkedIn</span></a></li>
+				<div class="inner">
+					<div class="content">
+						<section>
+							<h3>About Me</h3>
+							<p>I am a young Electrical Engineering from Arizona who is passionate about new levels of interconnection through technology.
+							Starting my career with Ford was an eye-opening experience; learning about the automotive industry, vehicle automation and electrification. It showed me there are a lot of new engineering challenges in the automotive space right now and plenty of opportunities to be involved in meaningful work, not just for the company, but for something bigger. </p>
+						</section>
+						<section>
+							<h3>Education</h3>
+							<ul class="alt">
+								<li><a href="https://engineering.asu.edu/" target="_blank">Arizona State University (BSEE)</a></li>
+								<li><a href="https://barretthonors.asu.edu/about" target="_blank">Barrett, the Honors College.</a></li>
 							</ul>
-						</div>
+						</section>
+						<section>
+							<h3>Links</h3>
+							<ul class="plain">
+								<li><a href="https://www.linkedin.com/in/ian-saltwick-23591b81/" target="_blank"><i class="icon fa-linkedin">&nbsp;</i>Linkedin</a></li>
+								<li><a href="https://github.com/iSalty" target="_blank"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+								<li><a href="https://www.facebook.com/ian.saltwick/photos" target="_blank"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+							</ul>
+						</section>
 					</div>
-					<ul class="copyright">
-						<li>&copy; iSaltwick</li>
-						<li>Design: <a href="http://templated.co" target="_blank">TEMPLATED</a></li>
-					</ul>
+					<div class="copyright">
+						&copy; iSaltwick | Design: <a href="https://templated.co">TEMPLATED</a>
+					</div>
 				</div>
 			</footer>
 
-			<!-- Javascript functions for showing/hiding post body text-->
-			<script>
-				// Hide the PostBodyBlock of each post initially
-				posts = ['LEDbikePostBody','RPiDeskBacklightPostBody']				
-				for (i=0; i<posts.length; i++) {
-					x = document.getElementById(posts[i])
-					x.style.display = 'none'
-				}
-				
-				// On LEARN MORE button press show PostBodyBlock
-				function ShowPostBody(DivID) {
-					var x = document.getElementById(DivID);
-					if (x.style.display === 'none') {
-						x.style.display = 'block';
-					} else {
-						x.style.display = 'none';
-					}
-				}
-			</script>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
 	</body>
 </html>

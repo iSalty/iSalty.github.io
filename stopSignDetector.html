@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>iSaltwick Stop Sign Detector</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">iSalty.github.io</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#ProjectHub">Projects</a>
+					<li><a href="index.html#About">About</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<!-- <h1>Project</h1> -->
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<h2>Stop Sign Detector Program</h2>
+						</header>
+						<p>I wanted to learn more about computer vision and get a deeper understanding of the difference between rule based programs and AI programs that use deep neural networks to learn and classify images. 
+							I came up with the idea of writing a program that can detect stop signs in a given image using a rule based approach first and then again making the same program using machine learning and neural 
+							networks. The program shown here is the rule based approach which proved to be more effective than I had anticipated. Shown below is an example input image.</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/stopSignDetect/stopSignInput.jpg" >
+						</div>
+						<hr />
+						<h3>Find the red pixels</h3>
+						<p>After you load the image we apply a mask to find all of the red pixels (since all stop signs are red in the US). We convert the image data to HSV (Hue, Saturation, Value) for easier color 
+							interpretation and create masks which get us only the red pixels. Below shows the input image with the red mask applied, you can see it gets the stop sign and the brake lights. We can then 
+							apply pattern matching on this more simplified image.</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/stopSignDetect/RedMaskWithHsvChart.jpg" style="max-height: 400px">
+						</div>
+						<hr />
+						<h3>Find Contours</h3>
+						<p>Now that we have a more simplified image to deal with, we can find contours on this image which picks out lines and shapes and groups them. To do this we use some built in functions from the 
+							OpenCv library. The picture below shows the contour lines in green, and it makes it easy to see that it is grouping the edges on the black/red boundary.</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/stopSignDetect/Contours.JPG" style="max-height: 400px">
+						</div>
+						<hr />
+						<h3>Determine if Stop Sign</h3>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/stopSignDetect/FlowChartStopSignDetect.JPG" >
+						</div>
+						<p></p>
+						<p>To make a decision on whether there is a stop sign in the image I just used 2 simple rules: Is it Red? Is it an Octagon (8 sides)? If both of these conditions are met then it determines 
+							that it is a stop sign. I have a function in <a href="https://github.com/iSalty/StopSignDetector/blob/main/StopSignDetectPic.py" target="blank">the code</a> which can determine the number 
+							of sides that a given contour has, it loops through all of the contours in the image and finds if there is one with 8 sides. If yes, it draws a box around that contour and shows it on the 
+							original image saying it found a stop sign. This same method would work on a video, just apply to each frame.</p>
+						<div style="max-height: 400px">
+							<img class="image center" src="images/stopSignDetect/stopSignOutput.jpg" >
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<a class="anchor" id="About"></a>
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<h3>About Me</h3>
+						<p>I am a young Electrical Engineering from Arizona who is passionate about new levels of interconnection through technology. Starting my career with Ford was an eye-opening experience; learning 
+							about the automotive industry, vehicle automation and electrification. It showed me there are a lot of new engineering challenges in the automotive space right now and plenty of opportunities 
+							to be involved in meaningful work, not just for the company, but for something bigger. </p>
+					</section>
+					<section>
+						<h3>Education</h3>
+						<ul class="alt">
+							<li><a href="https://engineering.asu.edu/" target="_blank">Arizona State University (BSEE)</a></li>
+							<li><a href="https://barretthonors.asu.edu/about" target="_blank">Barrett, the Honors College.</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Links</h3>
+						<ul class="plain">
+							<li><a href="https://www.linkedin.com/in/ian-saltwick-23591b81/" target="_blank"><i class="icon fa-linkedin">&nbsp;</i>Linkedin</a></li>
+							<li><a href="https://github.com/iSalty" target="_blank"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							<li><a href="https://www.facebook.com/ian.saltwick/photos" target="_blank"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="copyright">
+					&copy; iSaltwick | Design: <a href="https://templated.co">TEMPLATED</a>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
