@@ -44,7 +44,9 @@
 						<header>
 							<h2>Desk Backlight</h2>
 						</header>
-						<p>The Desk Backlight project is powered by a Raspberry Pi and a 1 meter long LED strip. Shortly after moving to Michigan for my new job at Ford I wanted to spruce up my apartment and decided that some backlights for the desk would do the trick. They can do static colors or enter a mode which is able to mimic the colors present on the monitor screens. Below is a diagram of the project components and wiring.</p>
+						<p>Shortly after moving to Michigan for my new job at Ford I wanted to spruce up my apartment and decided that some backlights for the desk would do the trick. 
+							They can do static colors or enter a mode which is able to mimic the colors present on the monitor screens. The design is powered by a Raspberry Pi and a 1 
+							meter long LED strip. Below is a diagram of the components and wiring.</p>
 						<div style="max-height: 400px">
 							<img class="image center" src="images/deskBacklight/DotStar-Desk-Backlight.png" style="max-height: 400px">
 						</div>
@@ -54,7 +56,9 @@
 						</div>
 						<hr />
 						<h3>Button Debounce</h3>
-						<p>I included a momentary push button for the user to change modes and turn ON/OFF all of the LEDs. Initially I ran into issues where a single button press would register as mulitple because of button bounce. I wrote extra software logic to reject button presses that occur within 0.2s of the previous to improve performance. </p>
+						<p>I included a momentary push button for the user to change modes and turn ON/OFF all of the LEDs. Initially, I ran into an issue where a single button press would 
+							register as mulitple presses due to 'button bounce' (voltage instabilities as the button litterally bounced from the motion after it was pressed or released). 
+							I had to write extra software logic to reject button presses that occured within 0.2s of the previous one (i.e. software debounce) to solve this issue. </p>
 						<div style="max-height: 400px">
 							<img class="image center" src="images/deskBacklight/buttonPress.gif" style="max-height: 400px">
 						</div>
@@ -64,7 +68,11 @@
 							<img class="image center" src="images/deskBacklight/SoftwareFlowChart_DeskBacklight.JPG" style="max-height: 400px">
 						</div>
 						<p></p>
-						<p>In order to get the data from my desktop computer to my Raspberry Pi I need a program running on each device. The <a href="https://github.com/iSalty/RPiDeskLight/blob/master/screenGrab.py" target="blank">server side program</a> (on my PC) screenshots the monitors twice per second, downsamples the data, and uploads the color data to a website. The <a href="https://github.com/iSalty/RPiDeskLight/blob/master/desk-backlight-button-v1.py" target="blank">client side program</a> (on the R-Pi) retrieves the data from the website and upates the LEDs accordingly using a serial communication interface to the Dotstar LED strip. Above is a flowchart showing the logic.</p>
+						<p>In order to get the data from my desktop computer to my Raspberry Pi I need a program running on each device. The 
+							<a href="https://github.com/iSalty/RPiDeskLight/blob/master/screenGrab.py" target="blank">server side program</a> (on my PC) screenshots the monitors twice per second, 
+							downsamples the data, and uploads the color data to a website on the LAN. The <a href="https://github.com/iSalty/RPiDeskLight/blob/master/desk-backlight-button-v1.py" target="blank">
+							client side program</a> (on the R-Pi) retrieves the data from the website and upates the LEDs accordingly using a serial communication interface to the Dotstar LED strip. 
+							Above is a flowchart showing the software logic. Below is a quick demonstration of the LED strip mimicking the colors present on the computer monitors.</p>
 						<div style="max-height: 400px">
 							<video class="video center" autoplay loop muted playsinline src="images/deskBacklight/DemoDeskBacklight.mp4"></video>
 						</div>
@@ -81,7 +89,7 @@
 						<h3>About Me</h3>
 						<p>I am an Electrical Engineer from Arizona who is passionate about new levels of interconnection through technology.
 							Starting my career with Ford was an eye-opening experience; learning about the automotive industry, vehicle automation 
-							and electrification. It showed me there are a lot of new engineering challenges in the automotive space right now and 
+							and electrification. It showed me there are a lot of new engineering challenges in the automotive space and 
 							plenty of opportunities to be involved in meaningful work, not just for the company, but for something bigger. </p>
 					</section>
 					<section>

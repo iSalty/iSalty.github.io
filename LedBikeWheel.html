@@ -44,27 +44,37 @@
 						<header>
 							<h2>LED Bike Wheel</h2>
 						</header>
-						<p>The LED Bike wheel was the senior project for my bachelors degree at Arizona State University. Me and my two other group members came up with the idea because we all rode bikes to campus and wanted to spice up our rides. The idea, at its core, is to create a standing image on the moving bike wheel by precisely controlling LEDs throughout its rotation.</p>
+						<p>The LED Bike wheel was the senior project for my bachelors degree at Arizona State University. Me and my two other group members came up with the idea 
+							because we all rode bikes to campus and wanted to spice up our rides. The idea is to create a standing image on the moving bike wheel by precisely 
+							controlling LEDs throughout its rotation.
+						</p>
 						<p>Below is a diagram of the physical layout of the deisgn and a picture of the completed LED Bike Wheel.</p>
 						<div style="max-height: 400px">
 							<img class="image center" src="images/LedBikeWheel/LedBikePhysicalLayout.jpg" >
 						</div>
 						<hr />
 						<h3>Working Principle</h3>
-						<p>The LED Bike wheel only has 4 sticks of LEDs, but when rotating it creates the illusion that whole wheel is continuous display. This is due to the phenomenon called <u><strong>Persistence of Vision</strong></u>, basically, our brain holds on to an image for longer than it actually appears in real life. This is analogous to a camera with a long exposure, and is why you can see the continuous image of a 
-							on the rotating wheel below. </p>
+						<p>The LED Bike wheel only has 4 sticks of LEDs, but when rotating it creates the illusion that whole wheel is continuous display. This is due to the phenomenon 
+							called <u><strong>Persistence of Vision</strong></u>, basically, our brain holds on to an image for longer than it actually appears in real life. This is 
+							analogous to a camera with a long exposure, and is why you can see the continuous image of a Banana on the rotating wheel below. </p>
 						<div style="max-height: 400px">
 							<img class="image center" src="images/LedBikeWheel/BananaLedWheel.gif" style="max-height: 400px">
 						</div>
 						<hr />
 						<h3>Image Processing</h3>
-						<p>Firstly, we need to be able to load and process any image sent to the system. You can connect to the Raspberry Pi over WiFi and upload any image (.jpg, .png, .gif). The R-Pi receives the image, resizes it (for uniform resolution), converts it to polar coordinates (so we can easily access angle data), decides which color the 12 LEDs should be at every degree of rotation and saves that into a text file. Our prototype only supported 8 colors (Red, Green, Blue, Yellow, Cyan, Purple, White, Black) but that could have been expanded in the future.</p>
+						<p>Firstly, we need to be able to load and process any image sent to the system. The Raspberry Pi is connected over WiFi and so you can upload any image 
+							(.jpg, .png, .gif) to it. The R-Pi receives the image, resizes it (for uniform resolution), converts it to polar coordinates (so we can easily access 
+							angle data), defines what color the 12 LEDs should be at every degree of rotation and saves that data into a text file. Our prototype only supported 
+							8 colors (Red, Green, Blue, Yellow, Cyan, Purple, White, Black) but that could have been expanded in the future.</p>
 						<div style="max-height: 400px">
 							<img class="image center" src="images/LedBikeWheel/ImageProcessingFlowChart_Output.jpg" style="max-height: 400px">
 						</div>
 						<hr />
 						<h3>Position Tracking and LED Update</h3>
-						<p>During runtime the R-Pi tracks where the LED sticks are by using the magnet attached to the bike and the hall effect sensors on the tip of each LED stick. When each stick passes the magnet it knows the exact position of each stick (all 90° apart from each other) and can calculate the RPM of the bike wheel. Using the RPM it can figure out how long to wait between updating the LEDs each 1° of rotation. When the time is right it grabs the color for each LED and sends it over SPI to the I/O chips which control the lights.</p>
+						<p>During runtime the R-Pi tracks where the LED sticks are by using the magnet attached to the bike and the hall effect sensors on the tip of each LED stick.
+							When each stick passes the magnet it knows the exact position of each stick (all 90° apart from each other) and can calculate the RPM of the bike wheel. 
+							Using the RPM, it then can determine how long to wait between updating the LEDs for each 1° of rotation. When the time is right it grabs the color for 
+							each LED and sends it over SPI to the I/O chips which control the lights.</p>
 						<div style="max-height: 400px">
 							<img class="image center" src="images/LedBikeWheel/LedControlFlowChart.JPG" style="max-height: 400px">
 						</div>
@@ -81,7 +91,7 @@
 						<h3>About Me</h3>
 						<p>I am an Electrical Engineer from Arizona who is passionate about new levels of interconnection through technology.
 							Starting my career with Ford was an eye-opening experience; learning about the automotive industry, vehicle automation 
-							and electrification. It showed me there are a lot of new engineering challenges in the automotive space right now and 
+							and electrification. It showed me there are a lot of new engineering challenges in the automotive space and 
 							plenty of opportunities to be involved in meaningful work, not just for the company, but for something bigger. </p>
 					</section>
 					<section>

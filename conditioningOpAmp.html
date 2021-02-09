@@ -41,15 +41,15 @@
 							<h2>Signal Conditioning Op Amp</h2>
 						</header>
 						<p>At Ford we were testing some lighting features using the ambient light nodes (RGB LEDs around the cabin) and wanted to automate the testing. In order to do so, 
-							we needed to tap into the PWM signals so we could read each duty cycle to determine the color and intensity. However, when we plugged in the signals to our PWM
-							board we ran into several problems. I was able to fix these problems using an Op Amp ciruict between the LED and our I/O board. </p>
+							we needed to tap into the PWM signals to read each duty cycle for determining the color and intensity. However, when we connected the signals to our PWM
+							board we ran into several problems. I was able to fix these issues using an Op Amp ciruict I designed between the LED and the I/O board. </p>
 						<div style="max-height: 400px">
 							<img class="image center" src="images/opAmp/Schem_Final.jpg" >
 						</div>
 						<hr />
 						<h3>Stage 1: Buffer</h3>
-						<p>When we first connected the LED's PWM pin directly to our I/O board we noticed that the LED was dimly lit, this mean that there was some parasitic current passing
-							through the I/O board. We found out that the PWM board only had an input impedance of 300k Omhs. Therefore, the first stage of my amplyifier would have to be a 
+						<p>When we first connected the LED's PWM pin directly to our I/O board we noticed that the LED was dimly lit red, this meant that there was some current passing
+							through the I/O board. We found out that the PWM board only had an input impedance of 300k Omhs. Therefore, the first stage of the amplifier would have to be a 
 							buffer which, ideally, has  infinite input impedance and would fix this problem.
 						</p>
 						<div style="max-height: 400px">
@@ -57,8 +57,8 @@
 						</div>
 						<hr />
 						<h3>Stage 2: Low Pass Filter</h3>
-						<p>Another issue was the fact that the PWM signal was biased up by the battery voltage (12V) and the forward voltage of the red LED was only 1.7V. This made it very 
-							difficult to set a threshold voltage for the PWM card to trigger from. I wanted my circuit to remove the VBatt bias so I would have a PWM signal roughly between 
+						<p>Another issue encountered was the fact that the PWM signals were biased up by the battery voltage (12V) and the forward voltage of the red LED was only 1.7V. This made it very 
+							difficult to set a threshold for the PWM card to trigger from. I wanted my circuit to remove the VBatt bias so I would have a PWM signal roughly between 
 							0V and 5V. I used a voltage divider and Low Pass filter in between the two Op Amps to remove some bias and get rid of any unwanted high frequency noise.
 						</p>
 						<div style="max-height: 400px">
@@ -66,9 +66,9 @@
 						</div>
 						<hr />
 						<h3>Stage 3: Non-Inverting Amplifier</h3>
-						<p> The third and final stage was the non-inverting amplifier with a gain of 3.2V/V. I wanted to amplify the peak to peak voltage to make it easier for 
-							the PWM card to read the signal properly because it is less likely that noise will put the signal over/under the threshold voltage. This was especially important 
-							for the Red LED because it had the lowest peak to peak voltage (1.7V) and was therefore the toughest to get a good reading of. Below is an oscilloscope trace comparing 
+						<p> The third, and final, stage was the non-inverting amplifier with a gain of 3.2V/V. I wanted to amplify the peak to peak voltage to make it easier for 
+							the PWM card to read and reduce the likelihood that noise would put the signal over the threshold voltage. This was especially important for the Red LED 
+							because it had the lowest peak to peak voltage (1.7V) and was therefore the toughest to get a good reading of. Below is an oscilloscope trace comparing 
 							input and output voltages (Ch1=Output, Ch2=Input).
 						</p>
 						<div style="max-height: 400px">
@@ -87,7 +87,7 @@
 						<h3>About Me</h3>
 						<p>I am an Electrical Engineer from Arizona who is passionate about new levels of interconnection through technology.
 							Starting my career with Ford was an eye-opening experience; learning about the automotive industry, vehicle automation 
-							and electrification. It showed me there are a lot of new engineering challenges in the automotive space right now and 
+							and electrification. It showed me there are a lot of new engineering challenges in the automotive space and 
 							plenty of opportunities to be involved in meaningful work, not just for the company, but for something bigger. </p>
 					</section>
 					<section>
