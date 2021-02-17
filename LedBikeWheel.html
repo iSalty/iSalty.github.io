@@ -44,7 +44,7 @@
 						<header>
 							<h2>LED Bike Wheel</h2>
 						</header>
-						<p>The LED Bike wheel was the senior project for my bachelors degree at Arizona State University. Me and my two other group members came up with the idea 
+						<p>The LED Bike wheel was the senior project for my bachelors degree at Arizona State University. My two other group members and I came up with the idea 
 							because we all rode bikes to campus and wanted to spice up our rides. The idea is to create a standing image on the moving bike wheel by precisely 
 							controlling LEDs throughout its rotation.
 						</p>
@@ -54,7 +54,7 @@
 						</div>
 						<hr />
 						<h3>Working Principle</h3>
-						<p>The LED Bike wheel only has 4 sticks of LEDs, but when rotating it creates the illusion that whole wheel is continuous display. This is due to the phenomenon 
+						<p>The LED Bike wheel only has 4 sticks of LEDs, but when rotating, it creates the illusion that whole wheel is one continuous display. This is due to the phenomenon 
 							called <u><strong>Persistence of Vision</strong></u>, basically, our brain holds on to an image for longer than it actually appears in real life. This is 
 							analogous to a camera with a long exposure, and is why you can see the continuous image of a Banana on the rotating wheel below. </p>
 						<div style="max-height: 400px">
@@ -73,7 +73,7 @@
 						<h3>Position Tracking and LED Update</h3>
 						<p>During runtime the R-Pi tracks where the LED sticks are by using the magnet attached to the bike and the hall effect sensors on the tip of each LED stick.
 							When each stick passes the magnet it knows the exact position of each stick (all 90° apart from each other) and can calculate the RPM of the bike wheel. 
-							Using the RPM, it then can determine how long to wait between updating the LEDs for each 1° of rotation. When the time is right it grabs the color for 
+							Using the RPM, it then can determine how long to wait between updating the LEDs for each 1° of rotation. When the time is right, it grabs the color for 
 							each LED and sends it over SPI to the I/O chips which control the lights.</p>
 						<div style="max-height: 400px">
 							<img class="image center" src="images/LedBikeWheel/LedControlFlowChart.JPG" style="max-height: 400px">
